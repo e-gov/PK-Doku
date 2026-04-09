@@ -23,10 +23,10 @@ Liidestuja peab käsitlema teenusliidese vastuseid nii sisuliste kui ka tehnilis
 
 ## Soovitatav käsitlus
 
-- kontrollida kõigepealt päringu päiseid, identifikaatoreid ja kohustuslikke välju;
-- veenduda, et kasutatakse õiget keskkonda ja õiget teenusliidest;
-- vajaduse korral kontrollida õigusi ja esindamisega seotud andmeid;
-- tehnilise tõrke korral pöörduda kokkulepitud toe poole koos päringu konteksti kirjeldusega.
+- kontrollida kõigepealt päringu päiseid, identifikaatoreid ja kohustuslikke välju
+- veenduda, et kasutatakse õiget keskkonda ja õiget teenusliidest
+- vajaduse korral kontrollida õigusi ja esindamisega seotud andmeid
+- tehnilise tõrke korral pöörduda kokkulepitud toe poole koos päringu konteksti kirjeldusega
 
 ## Tugi
 

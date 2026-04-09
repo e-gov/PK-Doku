@@ -24,11 +24,11 @@ Allolev tabel on ette nähtud kinnitatud keskkonnaandmete koondamiseks.
 
 Ligipääsu saamiseks tuleb kokku leppida vähemalt järgmised asjaolud:
 
-- liidestuva asutuse või infosüsteemi identifitseerimine;
-- kasutatav liidestumise viis;
-- kasutatavad keskkonnad;
-- vajalikud õigused;
-- vajaduse korral X-tee ja muude turvalahendustega seotud eeldused.
+- liidestuva asutuse või infosüsteemi identifitseerimine
+- kasutatav liidestumise viis
+- kasutatavad keskkonnad
+- vajalikud õigused
+- vajaduse korral X-tee ja muude turvalahendustega seotud eeldused
 
 ## Hallatav teave
 

@@ -14,11 +14,11 @@ Liidestuja peab arvestama, et teenusliideste ja rakendusliidese kirjelduste muut
 
 Dokumentatsioonis tuleb kinnitatud kujul kirjeldada vähemalt järgmised põhimõtted:
 
-- kuidas eristatakse teenusliidese versioone;
-- kus avaldatakse tehnilise kirjelduse muudatused;
-- kui pikalt toetatakse varasemaid versioone;
-- kuidas teavitatakse olulistest muudatustest;
-- milline on liidestuja kohustus muudatuste kasutuselevõtul.
+- kuidas eristatakse teenusliidese versioone
+- kus avaldatakse tehnilise kirjelduse muudatused
+- kui pikalt toetatakse varasemaid versioone
+- kuidas teavitatakse olulistest muudatustest
+- milline on liidestuja kohustus muudatuste kasutuselevõtul
 
 ## Muudatuste avaldamise register
 

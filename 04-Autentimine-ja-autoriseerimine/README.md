@@ -26,7 +26,7 @@ Kui liidestus toimub esindatava isiku või asutuse nimel, tuleb arvestada esinda
 
 Enne liidestuse kasutamist tuleb kirjalikult kokku leppida vähemalt järgmine teave:
 
-- millisel viisil päringu tegija tuvastatakse;
-- milliste toimingute puhul tehakse õiguste kontroll;
-- millistel juhtudel kasutatakse esindamisega seotud andmeid;
-- milliseid nähtavaid veateateid võib õiguste puudumise korral oodata.
+- millisel viisil päringu tegija tuvastatakse
+- milliste toimingute puhul tehakse õiguste kontroll
+- millistel juhtudel kasutatakse esindamisega seotud andmeid
+- milliseid nähtavaid veateateid võib õiguste puudumise korral oodata

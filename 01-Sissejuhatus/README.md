@@ -16,9 +16,9 @@ Dokumentatsioon on mõeldud kasutamiseks liidestuse kavandamisel, arendamisel, t
 
 Dokumentatsioon on suunatud:
 
-- asutustele, kes soovivad kasutada Postkast 2.0 teenusliideseid;
-- arenduspartneritele, kes valmistavad ette liidestuse tehnilist teostust;
-- analüütikutele ja projektijuhtidele, kes vajavad ülevaadet liidestumise eeltingimustest.
+- asutustele, kes soovivad kasutada Postkast 2.0 teenusliideseid
+- arenduspartneritele, kes valmistavad ette liidestuse tehnilist teostust
+- analüütikutele ja projektijuhtidele, kes vajavad ülevaadet liidestumise eeltingimustest
 
 ## Kasutusala
 

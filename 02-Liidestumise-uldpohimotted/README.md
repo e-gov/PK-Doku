@@ -14,8 +14,8 @@ Postkast 2.0-ga liidestumine toimub kokkulepitud teenusliideste kaudu. Liidestuj
 
 Postkast 2.0 puhul tuleb arvestada vähemalt kahe liidestumise viisiga:
 
-- tavapärane teenusliides, mida kasutatakse rakenduse vahendusel;
-- X-tee kaudu vahendatav teenusliides, mille puhul rakenduvad täiendavad päiste ja osapoolte tuvastamise nõuded.
+- tavapärane teenusliides, mida kasutatakse rakenduse vahendusel
+- X-tee kaudu vahendatav teenusliides, mille puhul rakenduvad täiendavad päiste ja osapoolte tuvastamise nõuded
 
 Konkreetne liidestumise viis sõltub kasutusjuhtumist ning eelnevalt kokku lepitud lahendusest.
 

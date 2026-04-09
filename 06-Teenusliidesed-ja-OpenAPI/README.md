@@ -25,9 +25,9 @@ Käesolev peatükk ei dubleeri tehnilist kirjeldust, vaid koondab liidestuja jao
 
 Rakendusliidese tehnilist kirjeldust tuleb kasutada vähemalt järgmistel eesmärkidel:
 
-- päringu ja vastuse väljade kontrollimiseks;
-- kohustuslike väljade tuvastamiseks;
-- võimalike vastusekoodide kontrollimiseks;
+- päringu ja vastuse väljade kontrollimiseks
+- kohustuslike väljade tuvastamiseks
+- võimalike vastusekoodide kontrollimiseks
 - näidispäringute ja näidisvastuste kasutamiseks arendustöö käigus.
 
 ## Oluline piirang
