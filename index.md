@@ -1,3 +1,9 @@
+---
+layout: default
+title: Avaleht
+nav_order: 1
+---
+
 ## Postkast 2.0
 
 Postkast 2.0 on Eesti e-riigi teavituste ja digitaalse postkasti lahendus, mis võimaldab asutustel ja infosüsteemidel edastada adressaatidele teavitusi ühtse lahenduse kaudu. Lahendus toetab teavituste vahendamist ning postkastiga seotud teenuste

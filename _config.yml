@@ -1,0 +1,10 @@
+title: Postkast 2.0
+description: Postkast 2.0 liidestuja dokumentatsioon
+remote_theme: just-the-docs/just-the-docs@v0.10.1
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+nav_sort: case_insensitive
+
+plugins:
+  - jekyll-remote-theme
