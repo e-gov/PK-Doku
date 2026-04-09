@@ -23,20 +23,24 @@ Liidestuja võiks alustada järgmisest järjestusest:
 
 ### Teavituse loomine
 
-Liidestuja edastab uue teavituse loomiseks vajaliku päringu teavituste API kaudu. Vajaduse korral tuleb kaasa anda täiendavad identifikaatorid või välise süsteemi päringu tunnus. Tehniline leping tuleb võtta teavituste API OpenAPI kirjeldusest.
+Liidestuja edastab uue teavituse loomiseks vajaliku päringu alamsüsteemi `notifications` kaudu. Tüüpilised operatsioonid on `POST /v1/notifications` ja vajaduse korral `POST /v1/notifications-from-template`. Vajaduse korral tuleb kaasa anda täiendavad identifikaatorid või välise süsteemi päringu tunnus.
 
 ### Teavituste loetelu küsimine
 
-Liidestuja küsib kasutajale või esindatavale osapoolele seotud teavituste loetelu teavituste API kaudu. Päringu juures tuleb arvestada nõutud identifikaatorite, võimaliku autentimise ja õiguste kontrolliga.
+Liidestuja küsib kasutajale või esindatavale osapoolele seotud teavituste loetelu alamsüsteemi `notifications` kaudu. Tüüpiline operatsioon on `GET /v1/notifications`. Päringu juures tuleb arvestada nõutud identifikaatorite, võimaliku autentimise ja õiguste kontrolliga.
 
 ### Teavituse detaili küsimine
 
-Liidestuja küsib konkreetse teavituse sisu või metaandmeid selle identifikaatori alusel. Vajaduse korral tuleb päringule lisada ka isiku- või postkastipõhised tunnused. Vastav endpoint tuleb valida teavituste API OpenAPI kirjeldusest.
+Liidestuja küsib konkreetse teavituse sisu või metaandmeid alamsüsteemi `notifications` kaudu. Tüüpiline operatsioon on `GET /v1/notifications/{id}`. Vajaduse korral tuleb päringule lisada ka isiku- või postkastipõhised tunnused.
 
 ### Kontaktandmete või eelistuste ajakohastamine
 
-Liidestuja kasutab kontaktandmete API-sid siis, kui on vaja hallata teavituste saamisega seotud andmeid. Selliste toimingute puhul võib rakenduda täiendav õiguste kontroll.
+Liidestuja kasutab alamsüsteemi `contacts` siis, kui on vaja hallata teavituste saamisega seotud andmeid. Tüüpilised operatsioonid on `GET /v1/contacts`, `PUT /v1/language-preferences`, `POST /v1/emails`, `PUT /v1/emails` ja `DELETE /v1/emails/{id}`. Selliste toimingute puhul võib rakenduda täiendav õiguste kontroll.
 
 ### X-tee kaudu vahendatav ajakohastamine
 
-Valitud toimingute puhul toimub liidestus X-tee vahendusel. Sellisel juhul tuleb avada peatükk `X-tee alamsüsteemid`, valida sobiv alamsüsteem ning kasutada vastavat OpenAPI kirjeldust või Swagger vaadet. Lisaks tuleb arvestada X-tee päiste, osapoolte tuvastamise ja võimalike esindamisega seotud nõuetega.
+Valitud toimingute puhul toimub liidestus X-tee vahendusel konkreetse alamsüsteemi kaudu, näiteks `notifications`, `contacts`, `central-template` või mõne `*-notification-management` alamsüsteemi kaudu. Sellisel juhul tuleb avada peatükk `X-tee alamsüsteemid`, valida sobiv alamsüsteem ning kasutada vastavat OpenAPI kirjeldust või Swagger vaadet. Lisaks tuleb arvestada X-tee päiste, osapoolte tuvastamise ja võimalike esindamisega seotud nõuetega.
+
+## Märkus õiguste kohta
+
+Õiguste kontroll rakendub mitme päringu puhul enne tegeliku teenuse väljakutset. Liidestuja ei pea õiguste kontrolli tingimata eraldi `rights` alamsüsteemi kaudu tegema, kui see ei ole konkreetse kasutusjuhtumi puhul eraldi kokku lepitud.

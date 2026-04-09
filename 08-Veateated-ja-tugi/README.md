@@ -31,10 +31,19 @@ Liidestuja peab käsitlema teenusliidese vastuseid nii sisuliste kui ka tehnilis
 
 ## Tugi
 
-Allolev tabel on ette nähtud ametlike kontaktide koondamiseks.
+Käesolev alajaotus on mõeldud ametlike kontaktide ja eskalatsioonikanalite koondamiseks. Kui kõik teemad lahendab sama teenusehalduse kontakt, võib sama kontakti korrata mitmes reas erineva märkusega.
+
+Tugipäringu esitamisel on soovitatav lisada vähemalt järgmine teave:
+
+- kasutatav keskkond;
+- alamsüsteemi või API nimi;
+- endpoint või operatsioon;
+- päringu aeg;
+- võimaluse korral päringu tunnus või `X-EXTERNAL-ID`;
+- saadud vastusekood ja veateade.
 
 | Teema | Kontakt või kanal | Märkus |
 |---|---|---|
-| Tehnilised küsimused | `[lisada]` | `[lisada]` |
-| Ligipääsud ja õigused | `[lisada]` | `[lisada]` |
-| Muudatused ja kooskõlastused | `[lisada]` | `[lisada]` |
+| Tehnilised küsimused | `[lisada tehniline kontakt, näiteks teenusehalduse e-post]` | OpenAPI, endpointide, päringute ja veateadete küsimused |
+| Ligipääsud ja õigused | `[lisada ligipääsude halduse kontakt]` | Keskkondade ligipääsud, õigused, X-tee klienditunnused ja seotud kooskõlastused |
+| Muudatused ja kooskõlastused | `[lisada tooteomaniku või koordineeriva meeskonna kontakt]` | Muudatusettepanekud, release-kooskõlastused ja liidestuse sisulised täpsustused |
