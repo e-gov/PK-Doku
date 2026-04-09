@@ -10,9 +10,9 @@ Käesolev peatükk koondab X-tee kaudu avaldatud REST teenusliideste tehnilised 
 
 ## Kättesaadavad vaated
 
-### Ühised teenusliidesed
+### Muud alamsüsteemid
 
-Käesolevas jaotises on toodud Postkast 2.0 ühised teenusliidesed, mis ei ole seotud konkreetse keskse alamsüsteemi ega teavituste halduse alamsüsteemi nimetusega. Need teenusliidesed täidavad üldotstarbelist rolli ning võivad olla kasutusel mitmes erinevas liidestusstsenaariumis.
+Käesolevas jaotises on toodud alamsüsteemid, mille nimetus ei lõppe kujuga `-central` ega `-notification-management`. Jaotus põhineb nimekujul ning seda ei tohi käsitleda eraldi tehnilise lepingu või ärilise klassifikatsioonina.
 
 <table>
   <thead>
@@ -39,7 +39,7 @@ Käesolevas jaotises on toodud Postkast 2.0 ühised teenusliidesed, mis ei ole s
 
 ### Kesksed alamsüsteemid
 
-Käesolevas jaotises on toodud kesksete alamsüsteemide teenusliidesed. Need vaated koondavad teenusliidesed, mille nimetus viitab kesksele kasutusviisile või kesksele teenindusloogikale.
+Käesolevas jaotises on toodud alamsüsteemid, mille nimetus lõppeb kujuga `-central`. Jaotus põhineb nimekujul ning aitab kataloogi lugemist lihtsustada. See ei tähenda iseseisvalt, et kõik selles rühmas olevad alamsüsteemid järgivad ühtset tehnilist või ärilist kasutusmustrit.
 
 <table>
   <thead>
@@ -66,7 +66,7 @@ Käesolevas jaotises on toodud kesksete alamsüsteemide teenusliidesed. Need vaa
 
 ### Teavituste halduse alamsüsteemid
 
-Käesolevas jaotises on toodud teavituste halduse alamsüsteemide teenusliidesed. Need vaated on seotud konkreetsete alamsüsteemidega, mille kaudu hallatakse teavituste loomise, küsimise või ajakohastamisega seotud toiminguid.
+Käesolevas jaotises on toodud alamsüsteemid, mille nimetus lõppeb kujuga `-notification-management`. Jaotus põhineb nimekujul ning seda tuleb käsitleda kataloogi lihtsustava rühmitusena, mitte iseseisva tehnilise lepinguna.
 
 <table>
   <thead>

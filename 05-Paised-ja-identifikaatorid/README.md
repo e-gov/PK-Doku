@@ -16,13 +16,18 @@ Allolevas tabelis on toodud peamised päised, mida tuleb liidestuse kavandamisel
 
 | Päise nimi | Kirjeldus | Vorming või näide | Märkus |
 |---|---|---|---|
-| `X-Road-Client` | X-tee kliendi tunnus | `[lisada kinnitatud väärtus]` | Kasutatakse X-tee kaudu vahendatava liidestuse korral |
-| `X-Road-UserId` | Päringu tegija isikukood | `EE12345678901` | Kasutatakse valitud teenusliideste puhul |
-| `X-Road-Represented-Party` | Esindatava osapoole tunnus | `[lisada kinnitatud vorming]` | Kasutatakse juhul, kui liidestus toimub esindamise alusel |
-| `X-User-Access-Type` | Ligipääsu liik | `UNLIMITED` | Kasutatakse valitud liidestes vastavalt kokkuleppele |
+| `X-Road-Client` | X-tee kliendi tunnus | `[lisada kinnitatud väärtus]` | Tavaliselt lisatakse gateway või X-tee värava poolt, mitte lõpp-liidestuja poolt |
+| `X-Road-UserId` | X-tee kasutajatunnus | `EE12345678901` | Väärtus ei pruugi alati olla lõppkasutaja isikukood; see võib sõltuda esindamisest |
+| `X-Road-Represented-Party` | Esindatava osapoole tunnus | `[lisada kinnitatud vorming]` | Kasutatakse juhul, kui liidestus toimub esindamise alusel; tavaliselt seatakse X-tee värava kihis |
+| `X-User-Access-Type` | Ligipääsu liik | `UNLIMITED` | Lisatakse valitud radadel automaatselt |
 | `X-EXTERNAL-ID` | Välise süsteemi päringu tunnus | `[liidestuja määratud väärtus]` | Kasutatakse valitud loomise toimingutes |
 
-Osade päiste puhul sõltub kohustus sellest, kas päise edastab liidestuja ise või lisab selle vahendav kiht. See eristus tuleb iga liidestumise viisi puhul eraldi kinnitada.
+Osade päiste puhul peab liidestuja eristama kahte olukorda:
+
+- päis tuleb liidestuja päringus ise kaasa anda;
+- päis lisatakse gateway või X-tee värava poolt automaatselt.
+
+`X-Road-Client`, `X-Road-Represented-Party` ja `X-User-Access-Type` ei ole üldjuhul päised, mida liidestuja peaks omal käel vabalt moodustama. Nende kasutamine tuleb siduda konkreetse liidestumise viisiga.
 
 ## Identifikaatorid
 
@@ -31,7 +36,7 @@ Osade päiste puhul sõltub kohustus sellest, kas päise edastab liidestuja ise 
 | `code` | Isiku või esindatava osapoole kood | `EE38206084915` või `EE70006317` | Täpne kasutus sõltub teenusliidesest |
 | `inboxId` | Postkasti identifikaator | `0f2bf1f9-8537-4962-a41d-c7edb6df6efa` | Kasutatakse valitud päringutes |
 | `personType` | Isiku või osapoole tüüp | `[lisada lubatud väärtused teenusliidese järgi]` | Kasutatakse valitud päringutes |
-| Ressursi identifikaator | Päringus viidatava objekti identifikaator | `26331554-797c-4355-82dc-9c4bafcd719a` | Vorming on üldjuhul universaalselt kordumatu identifikaator |
+| Ressursi identifikaator | Päringus viidatava objekti identifikaator | `26331554-797c-4355-82dc-9c4bafcd719a` | Vorming on üldjuhul `UUID` |
 
 ## Vormingunõuded
 

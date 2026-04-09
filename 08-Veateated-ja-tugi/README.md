@@ -14,12 +14,13 @@ Liidestuja peab käsitlema teenusliidese vastuseid nii sisuliste kui ka tehnilis
 
 | Vastusekood | Tähendus | Tüüpiline põhjus |
 |---|---|---|
+| `401` | Päring ei ole autentitud või token ei kehti | Küpsis või `Authorization` päis puudub, token on vigane või aegunud |
 | `400` | Päring ei vasta nõutud vormingule või sisendandmed on puudulikud | Kohustuslik väli puudub, väärtuse vorming on vale või päringu sisu ei vasta reeglitele |
 | `403` | Toiming ei ole lubatud | Õigus puudub või päringu tegijal ei ole nõutud volitust teha soovitud toimingut |
 | `404` | Otsitud andmeid ei leitud | Ressurssi või seotud andmeid ei leitud esitatud identifikaatori alusel |
 | `500` | Teenuse töötlemisel tekkis tehniline tõrge | Ajutine või teenusepoolne töötlemisviga |
 
-Õiguste puudumisega seotud nähtava veateate kasutamisel tuleb lähtuda kinnitatud käitumisest. Kui konkreetse liidese puhul on kokku lepitud veakood või veatähis, tuleb see lisada siia eraldi.
+Õiguste puudumisega seotud nähtava veateate kasutamisel tuleb lähtuda kinnitatud käitumisest. Kui konkreetse liidese puhul on kokku lepitud veakood või veatähis, näiteks `ERROR.12`, tuleb see lisada siia eraldi.
 
 ## Soovitatav käsitlus
 

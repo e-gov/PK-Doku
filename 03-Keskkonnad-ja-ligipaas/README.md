@@ -14,11 +14,11 @@ Liidestus tuleb ette valmistada ja kontrollida eraldi selleks ettenähtud keskko
 
 Allolev tabel on ette nähtud kinnitatud keskkonnaandmete koondamiseks.
 
-| Keskkond        | Kasutusotstarve | Teenusliidese baas-aadress | Rakendusliidese tehnilise kirjelduse aadress | Märkused |
-|-----------------|---|---|---|---|
-| Arenduskeskkond | Arendamine ja esmane kontroll | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
-| Testkeskkond    | Süsteemne testimine | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
-| Tootmiskeskkond | Kasutusele võetud liidestus | `[lisada]` | `[lisada]` | `[lisada]` |
+| Keskkond | Kasutusotstarve | Teenusliidese baas-aadress | Rakendusliidese tehnilise kirjelduse aadress | Märkused |
+|----------|---|---|---|---|
+| DEV      | Arendamine ja esmane kontroll | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
+| TEST     | Süsteemne testimine | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
+| LIVE     | Kasutusele võetud liidestus | `[lisada]` | `[lisada]` | `[lisada]` |
 
 ## Ligipääsu saamine
 

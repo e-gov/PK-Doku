@@ -76,6 +76,11 @@
     if (!openApiUrl) {
       errorBox.hidden = false;
     } else {
+      const renderFailure = function () {
+        errorBox.hidden = false;
+        errorBox.innerHTML = 'OpenAPI kirjeldust ei õnnestunud laadida. Kontrollige, kas viidatud JSON aadress on kättesaadav. Vajaduse korral avage kõigepealt link <a href="' + openApiUrl + '">OpenAPI JSON</a> või pöörduge dokumentatsioonis nimetatud toe poole.';
+      };
+
       window.ui = SwaggerUIBundle({
         url: openApiUrl,
         dom_id: "#swagger-ui",
@@ -84,7 +89,14 @@
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
         ],
-        layout: "BaseLayout"
+        layout: "BaseLayout",
+        onComplete: function () {
+          const swaggerContainer = document.getElementById("swagger-ui");
+          if (!swaggerContainer || !swaggerContainer.textContent.trim()) {
+            renderFailure();
+          }
+        },
+        onFailure: renderFailure
       });
     }
   </script>
