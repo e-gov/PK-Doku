@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postkast 2.0 X-tee rakendusliidesed</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">
+  <style>
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+
+    .topbar {
+      box-sizing: border-box;
+      padding: 16px 24px;
+      border-bottom: 1px solid #d8dee4;
+      background: #ffffff;
+    }
+
+    .topbar h1 {
+      margin: 0 0 4px;
+      font-size: 20px;
+      color: #1f2328;
+    }
+
+    .topbar p {
+      margin: 0;
+      color: #57606a;
+      font-size: 14px;
+    }
+
+    #swagger-ui {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <h1>Teavituste rakendusliides</h1>
+    <p>Swagger vaade kasutab OpenAPI kirjeldust välisest aadressist <code>https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/notifications_20.json</code>.</p>
+  </div>
+
+  <div id="swagger-ui"></div>
+
+  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-standalone-preset.js"></script>
+  <script>
+    const openApiUrl = "https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/notifications_20.json";
+
+    window.ui = SwaggerUIBundle({
+      url: openApiUrl,
+      dom_id: "#swagger-ui",
+      deepLinking: true,
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIStandalonePreset
+      ],
+      layout: "BaseLayout"
+    });
+  </script>
+</body>
+</html>
