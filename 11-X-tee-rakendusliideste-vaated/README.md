@@ -1,19 +1,45 @@
 ---
 layout: default
-title: X-tee rakendusliideste vaated
+title: X-tee alamsüsteemid
 nav_order: 65
 ---
 
-# X-tee rakendusliideste vaated
+# Alamsüsteem EE/GOV/70006317/postkast REST teenusliideste kirjeldustega X-tee keskkonna "EE" jaoks
 
-Käesolev peatükk koondab X-tee kaudu avaldatud rakendusliideste tehnilised vaated, mida saab avada Swagger kasutajaliidese abil.
+Käesolev peatükk koondab X-tee kaudu avaldatud REST teenusliideste tehnilised vaated, mida saab avada Swagger kasutajaliidese abil. Alamsüsteemide loetelu hallatakse eraldi andmefailis, et uute kirjete lisamine ei eeldaks lehe sisu käsitsi ümberkirjutamist.
 
 ## Kättesaadavad vaated
 
-| Rakendusliidese nimetus | Vaade |
-|---|---|
-| Teavituste rakendusliides | [Ava Swagger vaade](../swagger-ui/notifications.html) |
+### Ühised teenusliidesed
+
+| Alamsüsteem | Liidese liik | OpenAPI kirjeldus | Swagger vaade |
+|---|---|---|---|
+{% for item in site.data.xtee_subsystems %}
+{% unless item.name contains "-central" or item.name contains "-notification-management" %}
+| `{{ item.name }}` | {{ item.type }} | [Ava OpenAPI JSON]({{ item.openapi_url }}) | [Ava Swagger vaade](../swagger-ui/viewer.html?name={{ item.name | url_encode }}&url={{ item.openapi_url | url_encode }}) |
+{% endunless %}
+{% endfor %}
+
+### Kesksed alamsüsteemid
+
+| Alamsüsteem | Liidese liik | OpenAPI kirjeldus | Swagger vaade |
+|---|---|---|---|
+{% for item in site.data.xtee_subsystems %}
+{% if item.name contains "-central" %}
+| `{{ item.name }}` | {{ item.type }} | [Ava OpenAPI JSON]({{ item.openapi_url }}) | [Ava Swagger vaade](../swagger-ui/viewer.html?name={{ item.name | url_encode }}&url={{ item.openapi_url | url_encode }}) |
+{% endif %}
+{% endfor %}
+
+### Teavituste halduse alamsüsteemid
+
+| Alamsüsteem | Liidese liik | OpenAPI kirjeldus | Swagger vaade |
+|---|---|---|---|
+{% for item in site.data.xtee_subsystems %}
+{% if item.name contains "-notification-management" %}
+| `{{ item.name }}` | {{ item.type }} | [Ava OpenAPI JSON]({{ item.openapi_url }}) | [Ava Swagger vaade](../swagger-ui/viewer.html?name={{ item.name | url_encode }}&url={{ item.openapi_url | url_encode }}) |
+{% endif %}
+{% endfor %}
 
 ## Märkus
 
-Käesolev Swagger vaade kasutab välist OpenAPI kirjelduse aadressi `https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/notifications_20.json`. Kui välise aadressi kättesaadavus või brauseripoolne laadimine on piiratud, tuleb kasutada dokumentatsioonikausta salvestatud kohalikku koopiat.
+OpenAPI kirjelduste aadressid pärinevad X-tee keskkonna `EE` kataloogi andmetest. Swagger vaade kasutab ühist vaaturilehte, millele antakse vastava alamsüsteemi OpenAPI kirjelduse aadress parameetrina.

@@ -1,0 +1,139 @@
+- name: aki-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/aki-central_0.json
+
+- name: aki-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/aki-notification-management_0.json
+
+- name: central-template
+  type: Keskne mallide alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/central-template_22.json
+
+- name: client-notification-management
+  type: Kliendi teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/client-notification-management_29.json
+
+- name: contacts
+  type: Kontaktide teenusliides
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/contacts_11.json
+
+- name: delivery-portal
+  type: Kättetoimetamise teenusliides
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/delivery-portal_1.json
+
+- name: eestiee-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/eestiee-central_6.json
+
+- name: elvl-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/elvl-central_5.json
+
+- name: elvl-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/elvl-notification-management_15.json
+
+- name: emta-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/emta-central_0.json
+
+- name: emta-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/emta-notification-management_3.json
+
+- name: keskkonnaamet-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/keskkonnaamet-central_4.json
+
+- name: keskkonnaamet-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/keskkonnaamet-notification-management_17.json
+
+- name: kpkoda-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/kpkoda-central_0.json
+
+- name: kpkoda-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/kpkoda-notification-management_3.json
+
+- name: lkf-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/lkf-central_4.json
+
+- name: lkf-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/lkf-notification-management_15.json
+
+- name: notifications
+  type: Teavituste teenusliides
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/notifications_20.json
+
+- name: pensionikeskus-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/pensionikeskus-central_3.json
+
+- name: pensionikeskus-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/pensionikeskus-notification-management_16.json
+
+- name: ppa-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/ppa-central_0.json
+
+- name: ppa-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/ppa-notification-management_2.json
+
+- name: rights
+  type: Õiguste teenusliides
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/rights_71.json
+
+- name: rik-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/rik-central_4.json
+
+- name: rik-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/rik-notification-management_15.json
+
+- name: ska-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/ska-central_0.json
+
+- name: ska-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/ska-notification-management_4.json
+
+- name: statistikaamet-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/statistikaamet-central_4.json
+
+- name: statistikaamet-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/statistikaamet-notification-management_17.json
+
+- name: tai-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/tai-central_4.json
+
+- name: tai-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/tai-notification-management_16.json
+
+- name: tartutaitur-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/tartutaitur-central_5.json
+
+- name: tartutaitur-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/tartutaitur-notification-management_14.json
+
+- name: terviseportaal-central
+  type: Keskne alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/terviseportaal-central_7.json
+
+- name: terviseportaal-notification-management
+  type: Teavituste halduse alamsüsteem
+  openapi_url: https://x-tee.ee/catalogue-data/EE/EE/GOV/70006317/postkast/terviseportaal-notification-management_21.json

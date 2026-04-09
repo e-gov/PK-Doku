@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postkast 2.0 Swagger vaade</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">
+  <style>
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+
+    .topbar {
+      box-sizing: border-box;
+      padding: 16px 24px;
+      border-bottom: 1px solid #d8dee4;
+      background: #ffffff;
+    }
+
+    .topbar h1 {
+      margin: 0 0 4px;
+      font-size: 20px;
+      color: #1f2328;
+    }
+
+    .topbar p {
+      margin: 0;
+      color: #57606a;
+      font-size: 14px;
+      word-break: break-all;
+    }
+
+    .error {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 16px 20px;
+      border: 1px solid #cf222e;
+      border-radius: 6px;
+      background: #ffebe9;
+      color: #1f2328;
+    }
+
+    #swagger-ui {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <h1 id="page-title">Swagger vaade</h1>
+    <p id="page-url"></p>
+  </div>
+
+  <div id="error-box" class="error" hidden>
+    OpenAPI kirjelduse aadress puudub või on vigane. Avage vaade dokumentatsiooni tabelis oleva lingi kaudu.
+  </div>
+
+  <div id="swagger-ui"></div>
+
+  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-standalone-preset.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const openApiUrl = params.get("url");
+    const subsystemName = params.get("name") || "Swagger vaade";
+    const pageTitle = document.getElementById("page-title");
+    const pageUrl = document.getElementById("page-url");
+    const errorBox = document.getElementById("error-box");
+
+    pageTitle.textContent = subsystemName;
+    pageUrl.textContent = openApiUrl || "";
+
+    if (!openApiUrl) {
+      errorBox.hidden = false;
+    } else {
+      window.ui = SwaggerUIBundle({
+        url: openApiUrl,
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "BaseLayout"
+      });
+    }
+  </script>
+</body>
+</html>
