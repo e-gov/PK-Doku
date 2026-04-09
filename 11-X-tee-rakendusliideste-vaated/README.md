@@ -68,6 +68,8 @@ Käesolevas jaotises on toodud alamsüsteemid, mille nimetus lõppeb kujuga `-ce
 
 Käesolevas jaotises on toodud alamsüsteemid, mille nimetus lõppeb kujuga `-notification-management`. Jaotus põhineb nimekujul ning seda tuleb käsitleda kataloogi lihtsustava rühmitusena, mitte iseseisva tehnilise lepinguna.
 
+Märkus: nimetused kujul `*-notification-management` tähistavad X-tee kataloogis konkreetse asutuse või partneri teavituste halduse alamsüsteeme. Nende kirjete olemasolu viitab, et vastava osapoole jaoks on avaldatud eraldi X-tee kaudu kasutatav REST API. Liidestuja peab kasutama just seda alamsüsteemi, mis on tema asutuse või partnerlahenduse jaoks kokku lepitud.
+
 <table>
   <thead>
     <tr>

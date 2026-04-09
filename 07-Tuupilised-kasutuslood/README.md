@@ -41,6 +41,8 @@ Liidestuja kasutab alamsüsteemi `contacts` siis, kui on vaja hallata teavituste
 
 Valitud toimingute puhul toimub liidestus X-tee vahendusel konkreetse alamsüsteemi kaudu, näiteks `notifications`, `contacts`, `central-template` või mõne `*-notification-management` alamsüsteemi kaudu. Sellisel juhul tuleb avada peatükk `X-tee alamsüsteemid`, valida sobiv alamsüsteem ning kasutada vastavat OpenAPI kirjeldust või Swagger vaadet. Lisaks tuleb arvestada X-tee päiste, osapoolte tuvastamise ja võimalike esindamisega seotud nõuetega.
 
+Kui kasutatav alamsüsteem on kujul `*-notification-management`, tähendab see üldjuhul, et tegemist on konkreetse asutuse või partneri teavituste halduse REST API-ga, mis on X-tee kaudu avaldatud. Liidestuja ei peaks sellisel juhul valima suvalist `*-notification-management` kirjet, vaid ainult selle, mis on tema kasutusjuhtumi jaoks eraldi kokku lepitud.
+
 ## Märkus õiguste kohta
 
 Õiguste kontroll rakendub mitme päringu puhul enne tegeliku teenuse väljakutset. Liidestuja ei pea õiguste kontrolli tingimata eraldi `rights` alamsüsteemi kaudu tegema, kui see ei ole konkreetse kasutusjuhtumi puhul eraldi kokku lepitud.
