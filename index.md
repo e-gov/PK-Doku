@@ -4,6 +4,14 @@ title: Avaleht
 nav_order: 1
 ---
 
+<div style="max-width: 335px;">
+  <img
+    src="{{ '/assets/images/nextgenerationeu.webp' | relative_url }}"
+    alt="Rahastanud Euroopa Liit NextGenerationEU ja Eesti tuleviku heaks"
+    style="display:block; width:100%; height:auto;"
+  >
+</div>
+
 ## Postkast 2.0
 
 Postkast 2.0 on Eesti e-riigi teavituste ja digitaalse postkasti lahendus, mis võimaldab asutustel ja infosüsteemidel edastada adressaatidele teavitusi ühtse lahenduse kaudu. Lahendus toetab teavituste vahendamist ning postkastiga seotud teenuste
