@@ -30,6 +30,21 @@ Osade päiste puhul peab liidestuja eristama kahte olukorda:
 
 `X-Road-Client`, `X-Road-Represented-Party` ja `X-User-Access-Type` ei ole üldjuhul päised, mida liidestuja peaks omal käel vabalt moodustama. Nende kasutamine tuleb siduda konkreetse liidestumise viisiga.
 
+## Gateway poolt lisatavad väljad ja päised
+
+Valitud gateway radadel võib liidestuja jaoks oluline osa päringuandmetest olla lisatud automaatselt. See tähendab, et liidestuja ei pea alati kõiki välju ise request body-sse või query parameetritesse moodustama.
+
+Tüüpilised näited:
+
+- `code` lisatakse või suunatakse edasi valitud radadel automaatselt
+- `inboxId` lisatakse valitud radadel automaatselt
+- `personType` lisatakse valitud radadel automaatselt
+- `X-Road-Client` lisatakse üldjuhul gateway või X-tee kihis
+- `X-Road-UserId` võib sõltuda esindamisest olla kas esindatav osapool või tegelik kasutaja
+- `X-User-Access-Type` lisatakse valitud radadel automaatselt
+
+Liidestuja peab iga kasutatava endpointi puhul lähtuma sellest, kas vastav väli on tema sisendandmete osa või gateway poolt lisatav tehniline väli.
+
 ## Identifikaatorid
 
 | Nimi | Kirjeldus | Vorming või näide | Märkus |
@@ -38,6 +53,16 @@ Osade päiste puhul peab liidestuja eristama kahte olukorda:
 | `inboxId` | Postkasti identifikaator | `0f2bf1f9-8537-4962-a41d-c7edb6df6efa` | Kasutatakse valitud päringutes |
 | `personType` | Isiku või osapoole tüüp | `[lisada lubatud väärtused teenusliidese järgi]` | Kasutatakse valitud päringutes |
 | Ressursi identifikaator | Päringus viidatava objekti identifikaator | `26331554-797c-4355-82dc-9c4bafcd719a` | Vorming on üldjuhul `UUID` |
+
+## Haldusliidese REST API tüüpilised väljad
+
+Partneri haldusliidese REST API puhul tuleb arvestada ka väljadega, mida X-tee kataloogi vaates ei pruugi üldse olla. Tüüpilised näited on:
+
+- `templateId` või `originalTemplateId`, kui teavitus luuakse olemasoleva malli alusel
+- `sendTime`, kui saatmine toimub ajastatult
+- `parameters`, mis sisaldab saajate ja muutuvate väärtuste andmeid
+- `attachments`, kui päringuga saadetakse kaasa manused
+- `X-EXTERNAL-ID`, kui kokkulepitud voog kasutab välist päringu tunnust jälitamiseks
 
 ## Vormingunõuded
 

@@ -15,11 +15,37 @@ Liidestus tuleb ette valmistada ja kontrollida eraldi selleks ettenähtud keskko
 
 Allolev tabel on ette nähtud kinnitatud keskkonnaandmete koondamiseks.
 
-| Keskkond | Kasutusotstarve | Teenusliidese baas-aadress | Rakendusliidese tehnilise kirjelduse aadress | Märkused |
+Tabelis tuleb eristada kahte eri liiki aadressi:
+
+- API päringute baas-aadress: aadress, kuhu liidestuja saadab tegelikud äripäringud
+- OpenAPI või Swaggeri aadress: aadress, kust liidestuja avab tehnilise kirjelduse
+
+| Keskkond | Kasutusotstarve | API päringute baas-aadress | OpenAPI või Swaggeri aadress | Märkused |
 |----------|---|---|---|---|
 | DEV      | Arendamine ja esmane kontroll | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
 | TEST     | Süsteemne testimine | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
 | LIVE     | Kasutusele võetud liidestus | `[lisada]` | `[lisada]` | `[lisada]` |
+
+## Eeltingimused enne TEST või LIVE kasutust
+
+Liidestuja jaoks tuleb enne test- või tootmiskeskkonna kasutamist kinnitada vähemalt järgmised eeltingimused:
+
+- kas kasutatav kanal on X-tee või partneri haldusliidese REST API
+- vajalikud GovSSO, õiguste või muu autentimise ja autoriseerimise kokkulepped
+- X-tee klienditunnused, turvaserveri kirjeldus ja seotud kooskõlastused, kui kasutatav kanal on X-tee
+- haldusliidese teenusepakkuja või seotud süsteemi registreerimine, kui see on kokkulepitud kasutusjuhtumi eeldus
+- võrguühendused ja tulemüüri ligipääsud kokkulepitud teenuste kasutamiseks
+
+Kui liidestus eeldab partneri haldusliidese juurutamist, tuleb lisaks eraldi kinnitada selle platvormi- ja salvestuslahenduse eeldused.
+
+## Toodangusse mineku kontrollnimekiri
+
+- kokkulepitud API-d ja alamsüsteemid on kinnitatud
+- vajalikud õigused ja autentimisreeglid on seadistatud
+- X-tee seadistus on lõpetatud, kui see on kasutusel
+- keskkondade aadressid ja OpenAPI kirjeldused on liidestujale edastatud
+- kokkulepitud testjuhtumid on edukalt läbitud
+- tugikontaktid ja eskalatsioonikanalid on kinnitatud
 
 ## Ligipääsu saamine
 

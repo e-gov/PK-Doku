@@ -23,6 +23,10 @@ Liidestuja peab käsitlema teenusliidese vastuseid nii sisuliste kui ka tehnilis
 
 Õiguste puudumisega seotud nähtava veateate kasutamisel tuleb lähtuda kinnitatud käitumisest. Kui konkreetse liidese puhul on kokku lepitud veakood või veatähis, näiteks `ERROR.12`, tuleb see lisada siia eraldi.
 
+Näide:
+
+- `403 Forbidden` koos veatähisega `ERROR.12` võib tähendada, et kasutajal või esindataval osapoolel puudub nõutud õigus valitud operatsiooni tegemiseks
+
 ## Soovitatav käsitlus
 
 - kontrollida kõigepealt päringu päiseid, identifikaatoreid ja kohustuslikke välju
@@ -48,3 +52,9 @@ Tugipäringu esitamisel on soovitatav lisada vähemalt järgmine teave:
 | Tehnilised küsimused | `[lisada tehniline kontakt, näiteks teenusehalduse e-post]` | OpenAPI, endpointide, päringute ja veateadete küsimused |
 | Ligipääsud ja õigused | `[lisada ligipääsude halduse kontakt]` | Keskkondade ligipääsud, õigused, X-tee klienditunnused ja seotud kooskõlastused |
 | Muudatused ja kooskõlastused | `[lisada tooteomaniku või koordineeriva meeskonna kontakt]` | Muudatusettepanekud, release-kooskõlastused ja liidestuse sisulised täpsustused |
+
+## Vastutuste jaotus
+
+- tehniline tugi: endpointid, OpenAPI kirjeldused, veateadete analüüs
+- ligipääsude ja õiguste haldus: keskkonnad, õigused, X-tee klienditunnused, GovSSO või muu autentimiskokkulepe
+- kooskõlastav või toote eest vastutav meeskond: muudatused, release’i ajastus, liidestuse sisulised kokkulepped
