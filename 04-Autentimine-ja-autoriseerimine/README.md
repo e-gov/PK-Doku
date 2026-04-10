@@ -2,6 +2,7 @@
 layout: default
 title: Autentimine ja autoriseerimine
 nav_order: 40
+permalink: /04-Autentimine-ja-autoriseerimine/
 ---
 
 # Autentimine ja autoriseerimine

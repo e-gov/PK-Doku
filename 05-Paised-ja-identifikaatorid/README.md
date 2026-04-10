@@ -2,6 +2,7 @@
 layout: default
 title: Päised ja identifikaatorid
 nav_order: 50
+permalink: /05-Paised-ja-identifikaatorid/
 ---
 
 # Päised ja identifikaatorid

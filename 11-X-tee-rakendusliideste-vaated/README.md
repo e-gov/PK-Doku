@@ -2,6 +2,7 @@
 layout: default
 title: X-tee alamsüsteemid
 nav_order: 65
+permalink: /11-X-tee-rakendusliideste-vaated/
 ---
 
 # Alamsüsteem EE/GOV/70006317/postkast REST teenusliideste kirjeldustega X-tee keskkonna "EE" jaoks

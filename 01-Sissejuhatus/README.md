@@ -2,6 +2,7 @@
 layout: default
 title: Sissejuhatus
 nav_order: 10
+permalink: /01-Sissejuhatus/
 ---
 
 # Sissejuhatus

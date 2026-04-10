@@ -2,6 +2,7 @@
 layout: default
 title: Versioonid ja muudatuste haldus
 nav_order: 75
+permalink: /10-Versioonid-ja-muudatuste-haldus/
 ---
 
 # Versioonid ja muudatuste haldus

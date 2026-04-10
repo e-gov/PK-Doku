@@ -2,6 +2,7 @@
 layout: default
 title: Tüüpilised kasutuslood
 nav_order: 70
+permalink: /07-Tuupilised-kasutuslood/
 ---
 
 # Tüüpilised kasutuslood

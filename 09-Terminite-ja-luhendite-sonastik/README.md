@@ -2,6 +2,7 @@
 layout: default
 title: Terminite ja lühendite sõnastik
 nav_order: 90
+permalink: /09-Terminite-ja-luhendite-sonastik/
 ---
 
 # Terminite ja lühendite sõnastik

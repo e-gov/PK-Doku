@@ -2,6 +2,7 @@
 layout: default
 title: Veateated ja tugi
 nav_order: 80
+permalink: /08-Veateated-ja-tugi/
 ---
 
 # Veateated ja tugi

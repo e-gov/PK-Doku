@@ -8,16 +8,16 @@ Dokumentatsioon on koostatud liidestuja vaatest. Siin ei kirjeldata süsteemi si
 
 Soovitatav on tutvuda dokumentatsiooniga järgmises järjekorras:
 
-1. [Sissejuhatus](./01-Sissejuhatus/README.md)
-2. [Liidestumise üldpõhimõtted](./02-Liidestumise-uldpohimotted/README.md)
-3. [Keskkonnad ja ligipääs](./03-Keskkonnad-ja-ligipaas/README.md)
-4. [Autentimine ja autoriseerimine](./04-Autentimine-ja-autoriseerimine/README.md)
-5. [Päised ja identifikaatorid](./05-Paised-ja-identifikaatorid/README.md)
-6. [Teenusliidesed ja rakendusliidese kirjeldus](./06-Teenusliidesed-ja-OpenAPI/README.md)
-7. [Tüüpilised kasutuslood](./07-Tuupilised-kasutuslood/README.md)
-8. [Versioonid ja muudatuste haldus](./10-Versioonid-ja-muudatuste-haldus/README.md)
-9. [Veateated ja tugi](./08-Veateated-ja-tugi/README.md)
-10. [Terminite ja lühendite sõnastik](./09-Terminite-ja-luhendite-sonastik/README.md)
+1. [Sissejuhatus](./01-Sissejuhatus/)
+2. [Liidestumise üldpõhimõtted](./02-Liidestumise-uldpohimotted/)
+3. [Keskkonnad ja ligipääs](./03-Keskkonnad-ja-ligipaas/)
+4. [Autentimine ja autoriseerimine](./04-Autentimine-ja-autoriseerimine/)
+5. [Päised ja identifikaatorid](./05-Paised-ja-identifikaatorid/)
+6. [Teenusliidesed ja rakendusliidese kirjeldus](./06-Teenusliidesed-ja-OpenAPI/)
+7. [Tüüpilised kasutuslood](./07-Tuupilised-kasutuslood/)
+8. [Versioonid ja muudatuste haldus](./10-Versioonid-ja-muudatuste-haldus/)
+9. [Veateated ja tugi](./08-Veateated-ja-tugi/)
+10. [Terminite ja lühendite sõnastik](./09-Terminite-ja-luhendite-sonastik/)
 
 ## Oluline märkus
 

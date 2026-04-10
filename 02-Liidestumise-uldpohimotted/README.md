@@ -2,6 +2,7 @@
 layout: default
 title: Liidestumise üldpõhimõtted
 nav_order: 20
+permalink: /02-Liidestumise-uldpohimotted/
 ---
 
 # Liidestumise üldpõhimõtted

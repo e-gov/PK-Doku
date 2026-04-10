@@ -2,6 +2,7 @@
 layout: default
 title: API-d ja OpenAPI kirjeldused
 nav_order: 60
+permalink: /06-Teenusliidesed-ja-OpenAPI/
 ---
 
 # API-d ja OpenAPI kirjeldused
@@ -24,15 +25,11 @@ Allolevas tabelis ei ole toodud kõik võimalikud endpointid, vaid peamised API-
 | `central-template` | Mallipõhiste teavituste või mallidega seotud päringud juhul, kui see kasutus on liidestujaga kokku lepitud | [X-tee alamsüsteemid](../11-X-tee-rakendusliideste-vaated/) peatükis kirje `central-template` |
 | `client-notification-management` või konkreetne `*-notification-management` alamsüsteem | Kliendi või partneri teavituste haldusega seotud päringud | [X-tee alamsüsteemid](../11-X-tee-rakendusliideste-vaated/) peatükis vastav `*-notification-management` kirje |
 
-## Mida lisada tehnilise kirjelduse viitena
+## Kust leida tehniline kirjeldus
 
-Tehnilise kirjelduse viite all tuleb eelistatult kasutada ühte järgmistest variantidest:
+Liidestuja peab lähtuma selle alamsüsteemi või teenusliidese OpenAPI kirjeldusest, mille kasutamine on tema jaoks kokku lepitud.
 
-- linki dokumentatsiooni peatükile, kust vastava alamsüsteemi OpenAPI JSON või Swagger vaade on kohe avatav;
-- otsest OpenAPI JSON aadressi;
-- vajaduse korral keskkonnapõhist Swagger või `/v3/api-docs/...` aadressi, kui see on liidestujale avalikult kasutatav.
-
-Kui dokumentatsioon on mõeldud välisele liidestujale, on kõige selgem kasutada viitena kas konkreetset OpenAPI JSON aadressi või dokumentatsiooni peatükki `X-tee alamsüsteemid`.
+X-tee kaudu avaldatud teenusliideste tehnilised kirjeldused ja Swagger vaated on koondatud peatükki `X-tee alamsüsteemid`. Kui liidestuja kasutab muud kokkulepitud teenusliidest, tuleb lähtuda vastava keskkonna OpenAPI kirjeldusest või Swagger vaatest.
 
 ## OpenAPI kirjelduse kasutamine
 

@@ -2,6 +2,7 @@
 layout: default
 title: Keskkonnad ja ligipääs
 nav_order: 30
+permalink: /03-Keskkonnad-ja-ligipaas/
 ---
 
 # Keskkonnad ja ligipääs
