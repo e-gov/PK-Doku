@@ -9,6 +9,8 @@ permalink: /11-X-tee-rakendusliideste-vaated/
 
 Käesolev peatükk koondab X-tee kaudu avaldatud REST teenusliideste tehnilised vaated, mida saab avada Swagger kasutajaliidese abil. Alamsüsteemide loetelu hallatakse eraldi andmefailis, et uute kirjete lisamine ei eeldaks lehe sisu käsitsi ümberkirjutamist.
 
+Kui liidestujal on lisaks OpenAPI või Swagger vaatele vaja näha kõrgema taseme vooskeemi, siis kontaktide ja teavituste illustratiivsed skeemid on toodud peatükis `Skeemid ja joonised`.
+
 ## Kättesaadavad vaated
 
 ### Muud alamsüsteemid

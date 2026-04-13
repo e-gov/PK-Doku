@@ -36,6 +36,10 @@ Partneri haldusliidese kasutajaliidese puhul tuleb arvestada eraldi brauseri- v�
 
 Kuna see voog ei ole sama mis X-tee v천i avaliku gateway kaudu tarbitav API, tuleb haldusliidese kasutajaliidese reeglid alati eraldi kokku leppida.
 
+Allolev skeem illustreerib haldusliidese kasutajaliidese vaadet, kus GovSSO, autoriseerimiskiht ja haldusliidese teenused paiknevad eraldi loogilistes osades.
+
+![Haldusliidese autentimise ja autoriseerimise illustratiivne vaade]({{ '/assets/images/haldusliidese-autentimise-vaade.png' | relative_url }})
+
 ## Partneri s체steem -> haldusliidese REST API
 
 Kui partneri infos체steem saadab p채ringuid otse haldusliidese REST API-le, tuleb seda k채sitleda eraldi integratsioonirajana. Selle raja t채pne autentimismuster, 천iguste kontroll ja kasutatavad p채ised tuleb kinnitada selle konkreetse keskkonna ja gateway seadistuse j채rgi.

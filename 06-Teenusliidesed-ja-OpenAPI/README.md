@@ -40,6 +40,8 @@ Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb lähtuda eraldi h
 
 | Teenus või rada | Mille jaoks kasutada | OpenAPI või Swagger |
 |---|---|---|
+| `/system/v1/owners/default` | Asutuse põhiandmete küsimine ja uuendamine | [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/system` |
+| `/system/v1/profiles` | Profiilide loomine, küsimine ja haldamine | [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/system` |
 | `/template/v1/templates` | Mallide loomine, küsimine, uuendamine ja kustutamine | [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/template` |
 | `/template/v1/template-messages` | Malli tekstide loomine ja haldamine | [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/template` |
 | `/notification-management/v1/notifications` | Teavituste loomine ja valitud juhtudel detailvaade | [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/notification-management` |

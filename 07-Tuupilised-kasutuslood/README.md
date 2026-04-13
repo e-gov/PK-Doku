@@ -50,15 +50,17 @@ Kui kasutatav alamsüsteem on kujul `*-notification-management`, tähendab see �
 
 Kui liidestuja kasutab partneri haldusliidese REST API-d, on tüüpiline töövoog järgmine:
 
-1. mall luuakse või hallatakse teenuse `/template/v1/templates` kaudu
-2. malli tekstid lisatakse või hallatakse teenuse `/template/v1/template-messages` kaudu
-3. teavitus saadetakse teenuse `/notification-management/v1/notifications` kaudu
-4. saatmisoperatsioon leitakse teenuse `/notification-management/v1/sending-operations` kaudu
-5. logisid päritakse teenuse `/notification-management/v1/notification-logs` kaudu
+1. vajaduse korral seadistatakse kõigepealt asutuse andmed ja profiilid teenuste `/system/v1/owners/default` ja `/system/v1/profiles` kaudu
+2. mall luuakse või hallatakse teenuse `/template/v1/templates` kaudu
+3. malli tekstid lisatakse või hallatakse teenuse `/template/v1/template-messages` kaudu
+4. teavitus saadetakse teenuse `/notification-management/v1/notifications` kaudu
+5. saatmisoperatsioon leitakse teenuse `/notification-management/v1/sending-operations` kaudu
+6. logisid päritakse teenuse `/notification-management/v1/notification-logs` kaudu
 
 Haldusliidese voos tuleb arvestada vähemalt järgmiste kokkulepetega:
 
 - teate sisu- ja kanalipõhised reeglid võivad sõltuda mallist
+- saatja nähtav nimi, profiil ja muu seotud metaandmestik võivad sõltuda süsteemi `owners` ja `profiles` seadistusest
 - saatmisoperatsioonid ja logid kuuluvad haldusliidese voogu, mitte üldisele X-tee kataloogi vaatele
 - haldusliidese logidest tuleb eeldada ainult selle vooga seotud teadete nähtavust, kui teisiti ei ole kokku lepitud
 
