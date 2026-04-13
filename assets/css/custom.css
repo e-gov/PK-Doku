@@ -1,3 +1,50 @@
+:root {
+  --pk-sidebar-bg: #f8fafc;
+  --pk-sidebar-border: #e2e8f0;
+  --pk-nav-text: #475569;
+  --pk-nav-text-strong: #1f2937;
+  --pk-nav-hover-bg: #eef4fb;
+  --pk-nav-active-bg: #e6f0ff;
+  --pk-nav-active-text: #1d4ed8;
+}
+
+.side-bar {
+  background: var(--pk-sidebar-bg);
+  border-right: 1px solid var(--pk-sidebar-border);
+}
+
+.site-header,
+.site-footer {
+  border-color: var(--pk-sidebar-border);
+}
+
+.nav-list .nav-list-item .nav-list-link {
+  color: var(--pk-nav-text);
+  border-radius: 0.625rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover {
+  color: var(--pk-nav-text-strong);
+  background: var(--pk-nav-hover-bg);
+  text-decoration: none;
+}
+
+.nav-list .nav-list-item .nav-list-link.active {
+  color: var(--pk-nav-active-text);
+  background: var(--pk-nav-active-bg);
+  font-weight: 600;
+}
+
+.nav-list .nav-list-item .nav-list-expander {
+  color: #64748b;
+}
+
+.nav-list .nav-list-item .nav-list-expander:hover {
+  color: var(--pk-nav-text-strong);
+  background: transparent;
+}
+
 .main-content-wrap {
   max-width: 76rem !important;
 }

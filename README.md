@@ -17,7 +17,7 @@ Soovitatav on tutvuda dokumentatsiooniga järgmises järjekorras:
 7. [X-tee alamsüsteemid](./11-X-tee-rakendusliideste-vaated/)
 8. [Haldusliidese REST API-d](./12-Haldusliidese-REST-API-d/)
 9. [Tüüpilised kasutuslood](./07-Tuupilised-kasutuslood/)
-10. [Veateated ja tugi](./08-Veateated-ja-tugi/)
+10. [Veateated](./08-Veateated/)
 11. [Versioonid ja muudatuste haldus](./10-Versioonid-ja-muudatuste-haldus/)
 12. [Terminite ja lühendite sõnastik](./09-Terminite-ja-luhendite-sonastik/)
 13. [Skeemid ja joonised](./13-Skeemid-ja-joonised/)
