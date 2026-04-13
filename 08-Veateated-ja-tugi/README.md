@@ -40,21 +40,23 @@ Käesolev alajaotus on mõeldud ametlike kontaktide ja eskalatsioonikanalite koo
 
 Tugipäringu esitamisel on soovitatav lisada vähemalt järgmine teave:
 
-- kasutatav keskkond;
-- alamsüsteemi või API nimi;
-- endpoint või operatsioon;
-- päringu aeg;
-- võimaluse korral päringu tunnus või `X-EXTERNAL-ID`;
-- saadud vastusekood ja veateade.
+- kasutatav keskkond
+- alamsüsteemi või API nimi
+- otspunkt või operatsioon
+- päringu aeg
+- võimaluse korral päringu tunnus või `X-EXTERNAL-ID`
+- saadud vastusekood ja veateade
+
+Kui ametlikud kontaktid ei ole veel nimeliselt kinnitatud, tuleb tabelisse märkida vähemalt vastutav roll või meeskond. Tühja väärtust või märget `[lisada]` ei ole soovitatav jätta.
 
 | Teema | Kontakt või kanal | Märkus |
 |---|---|---|
-| Tehnilised küsimused | `[lisada tehniline kontakt, näiteks teenusehalduse e-post]` | OpenAPI, endpointide, päringute ja veateadete küsimused |
-| Ligipääsud ja õigused | `[lisada ligipääsude halduse kontakt]` | Keskkondade ligipääsud, õigused, X-tee klienditunnused ja seotud kooskõlastused |
-| Muudatused ja kooskõlastused | `[lisada tooteomaniku või koordineeriva meeskonna kontakt]` | Muudatusettepanekud, release-kooskõlastused ja liidestuse sisulised täpsustused |
+| Tehnilised küsimused | Kokkulepitud teenusehalduse e-post, piletikeskkond või tehniline kontakt | OpenAPI, otspunktide, päringute ja veateadete küsimused |
+| Ligipääsud ja õigused | Kokkulepitud ligipääsude halduse kontakt või meeskond | Keskkondade ligipääsud, õigused, X-tee klienditunnused ja seotud kooskõlastused |
+| Muudatused ja kooskõlastused | Kokkulepitud tooteomanik, teenuse omanik või koordineeriv meeskond | Muudatusettepanekud, release-kooskõlastused ja liidestuse sisulised täpsustused |
 
 ## Vastutuste jaotus
 
-- tehniline tugi: endpointid, OpenAPI kirjeldused, veateadete analüüs
+- tehniline tugi: otspunktid, OpenAPI kirjeldused, veateadete analüüs
 - ligipääsude ja õiguste haldus: keskkonnad, õigused, X-tee klienditunnused, GovSSO või muu autentimiskokkulepe
 - kooskõlastav või toote eest vastutav meeskond: muudatused, release’i ajastus, liidestuse sisulised kokkulepped

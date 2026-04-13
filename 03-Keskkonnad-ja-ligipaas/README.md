@@ -13,18 +13,29 @@ Liidestus tuleb ette valmistada ja kontrollida eraldi selleks ettenähtud keskko
 
 ## Keskkonnad
 
-Allolev tabel on ette nähtud kinnitatud keskkonnaandmete koondamiseks.
+Keskkonniti muutub tavaliselt host või domeen, kuid kasutatavad API otspunktid ja nende URL-id on üldjuhul ette määratud.
 
-Tabelis tuleb eristada kahte eri liiki aadressi:
+Liidestuja vaates tuleb alati eristada kahte eri liiki aadressi:
 
 - API päringute baas-aadress: aadress, kuhu liidestuja saadab tegelikud äripäringud
 - OpenAPI või Swaggeri aadress: aadress, kust liidestuja avab tehnilise kirjelduse
 
-| Keskkond | Kasutusotstarve | API päringute baas-aadress | OpenAPI või Swaggeri aadress | Märkused |
+| Liidestumise viis | Host või baasdomeen | API päringute URL-i näidiskuju | OpenAPI või Swaggeri URL-i näidiskuju | Märkused |
 |----------|---|---|---|---|
-| DEV      | Arendamine ja esmane kontroll | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
-| TEST     | Süsteemne testimine | `[lisada]` | `[lisada]` | `[vajaduse korral lisada piirangud]` |
-| LIVE     | Kasutusele võetud liidestus | `[lisada]` | `[lisada]` | `[lisada]` |
+| X-tee või avaliku gateway REST API | `https://{kokkulepitud-host}/api` | `/v1/...` | `/v3/api-docs/notification`, `/v3/api-docs/contact`, vajaduse korral `/swagger-ui/index.html` | Täpne OpenAPI sõltub kasutatavast teenusest või alamsüsteemist |
+| Partneri haldusliidese REST API | `https://{kokkulepitud-host}` | `/template/v1/...`, `/notification-management/v1/...`, vajaduse korral `/system/v1/...` | `/v3/api-docs/template`, `/v3/api-docs/notification-management`, vajaduse korral `/v3/api-docs/system`, `/swagger-ui/index.html` | Haldusliidese gateway ei kasuta üldjuhul `/api` prefiksit |
+
+Kui hosti väärtus ei ole veel kinnitatud, ei tohiks tabelisse jätta tühja kohta. Sellisel juhul tuleb dokumenteerida vähemalt URL-i näidiskuju ja märkida juurde, kelle käest hosti väärtus saadakse.
+
+## Keskkondade täitmise mall
+
+Kui dokumentatsiooni lisatakse konkreetsed keskkonnad, on soovitatav kasutada allolevat malli.
+
+| Keskkond | Kasutusotstarve | Kinnitatav host | API päringute näide | OpenAPI või Swaggeri näide |
+|----------|---|---|---|---|
+| DEV      | Arendamine ja esmane kontroll | `{dev-host}` | `https://{dev-host}/api/v1/...` või `https://{dev-host}/notification-management/v1/...` | `https://{dev-host}/api/v3/api-docs/notification` või `https://{dev-host}/v3/api-docs/notification-management` |
+| TEST     | Süsteemne testimine | `{test-host}` | `https://{test-host}/api/v1/...` või `https://{test-host}/notification-management/v1/...` | `https://{test-host}/api/v3/api-docs/notification` või `https://{test-host}/v3/api-docs/notification-management` |
+| LIVE     | Kasutusele võetud liidestus | `{live-host}` | `https://{live-host}/api/v1/...` või `https://{live-host}/notification-management/v1/...` | `https://{live-host}/api/v3/api-docs/notification` või `https://{live-host}/v3/api-docs/notification-management` |
 
 ## Eeltingimused enne TEST või LIVE kasutust
 

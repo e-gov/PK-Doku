@@ -13,7 +13,7 @@ Liidestuja peab arvestama, et tehniline ühendus ei pruugi olla piisav teenuslii
 
 ## X-tee või avaliku REST API autentimine
 
-REST API kaitstud endpointide kasutamisel tuleb arvestada, et päring peab olema autentitud. Autentimine toimub JSON Web Tokeni alusel, mis võib olla edastatud kas küpsisest või `Authorization: Bearer` päisest, sõltuvalt kasutuskanalist ja kliendilahendusest.
+REST API kaitstud otspunktide kasutamisel tuleb arvestada, et päring peab olema autentitud. Autentimine toimub JSON Web Tokeni alusel, mis võib olla edastatud kas küpsisest või `Authorization: Bearer` päisest, sõltuvalt kasutuskanalist ja kliendilahendusest.
 
 Dokumentatsiooni praeguse teadmise järgi kasutatakse vähemalt kahte autentimise allikat:
 
@@ -56,6 +56,6 @@ Enne liidestuse kasutamist tuleb kirjalikult kokku leppida vähemalt järgmine t
 
 - milline autentimismehhanism kehtib kasutatavale REST API, haldusliidese REST API või X-tee liidesele
 - kas token edastatakse küpsise või `Authorization` päise kaudu
-- milliste endpointide puhul rakendub õiguste kontroll
+- milliste otspunktide puhul rakendub õiguste kontroll
 - millistel juhtudel kasutatakse esindamisega seotud andmeid
 - milliseid nähtavaid vastusekoode ja veateateid tuleb autentimise või õiguste puudumise korral oodata

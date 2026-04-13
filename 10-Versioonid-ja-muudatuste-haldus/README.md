@@ -27,7 +27,9 @@ Allolev tabel on ette nähtud kinnitatud muudatuste ajaloo koondamiseks.
 
 | Kuupäev | Muudatuse kirjeldus | Mõjutatud teenusliides | Mõju liidestujale |
 |---|---|---|---|
-| `[lisada]` | `[lisada]` | `[lisada]` | `[lisada]` |
+| `YYYY-MM-DD` | Lühikirjeldus avaldatud muudatusest | Näiteks `notifications`, `contacts`, `template` või `notification-management` | Kas muudatus nõuab liidestuja poolset arendust, testimist või ümberseadistust |
+
+Kui muudatuste register ei ole veel täidetud, tuleb vähemalt kokku leppida, millises kanalis muudatused avaldatakse, kes selle registri eest vastutab ja kui kiiresti liidestujat teavitatakse.
 
 ## Oluline märkus
 

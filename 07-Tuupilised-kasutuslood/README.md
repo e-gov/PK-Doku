@@ -9,7 +9,7 @@ permalink: /07-Tuupilised-kasutuslood/
 
 ## Eesmärk
 
-Käesolev peatükk kirjeldab tüüpilisi kasutuslugusid, et aidata liidestujal valida õige API rühm ja mõista liidestumise tavapärast kasutusjärjekorda. Täpsed väljad, endpointid ja tehnilised näited tuleb võtta OpenAPI kirjeldusest.
+Käesolev peatükk kirjeldab tüüpilisi kasutuslugusid, et aidata liidestujal valida õige API rühm ja mõista liidestumise tavapärast kasutusjärjekorda. Täpsed väljad, otspunktid ja tehnilised näited tuleb võtta OpenAPI kirjeldusest.
 
 ## Millest alustada
 
@@ -38,7 +38,7 @@ Liidestuja küsib konkreetse teavituse sisu või metaandmeid alamsüsteemi `noti
 
 ### Kontaktandmete või eelistuste ajakohastamine
 
-Liidestuja kasutab alamsüsteemi `contacts` siis, kui on vaja hallata teavituste saamisega seotud andmeid. Tüüpilised operatsioonid on `GET /v1/contacts`, `PUT /v1/language-preferences`, `POST /v1/emails`, `PUT /v1/emails` ja `DELETE /v1/emails/{id}`. Kokkulepitud voogudes võivad sinna kuuluda ka mobiilinumbrite, suunamiste, automaatse kustutamise ja personaliseerimisega seotud endpointid. Selliste toimingute puhul võib rakenduda täiendav õiguste kontroll.
+Liidestuja kasutab alamsüsteemi `contacts` siis, kui on vaja hallata teavituste saamisega seotud andmeid. Tüüpilised operatsioonid on `GET /v1/contacts`, `PUT /v1/language-preferences`, `POST /v1/emails`, `PUT /v1/emails` ja `DELETE /v1/emails/{id}`. Kokkulepitud voogudes võivad sinna kuuluda ka mobiilinumbrite, suunamiste, automaatse kustutamise ja personaliseerimisega seotud otspunktid. Selliste toimingute puhul võib rakenduda täiendav õiguste kontroll.
 
 ### X-tee kaudu vahendatav ajakohastamine
 
