@@ -20,3 +20,69 @@
 .main-content th code {
   white-space: normal;
 }
+
+.main-content img {
+  cursor: zoom-in;
+}
+
+.pk-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(17, 24, 39, 0.82);
+  z-index: 1100;
+}
+
+.pk-lightbox.is-open {
+  display: flex;
+}
+
+.pk-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.pk-lightbox__figure {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: min(92vw, 1400px);
+  max-height: 92vh;
+}
+
+.pk-lightbox__image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(92vh - 3rem);
+  width: auto;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.28);
+  background: #fff;
+}
+
+.pk-lightbox__caption {
+  margin-top: 0.75rem;
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.pk-lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
