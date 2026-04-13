@@ -21,8 +21,12 @@
   white-space: normal;
 }
 
-.main-content img {
+.main-content img:not([data-lightbox="off"]) {
   cursor: zoom-in;
+}
+
+.main-content img[data-lightbox="off"] {
+  cursor: default;
 }
 
 .pk-lightbox {

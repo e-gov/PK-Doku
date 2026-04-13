@@ -8,6 +8,7 @@ nav_order: 1
   <img
     src="{{ '/assets/images/nextgenerationeu.webp' | relative_url }}"
     alt="Rahastanud Euroopa Liit NextGenerationEU ja Eesti tuleviku heaks"
+    data-lightbox="off"
     style="display:block; width:100%; height:auto;"
   >
 </div>

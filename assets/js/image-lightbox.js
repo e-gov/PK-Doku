@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const images = Array.from(contentRoot.querySelectorAll("img")).filter((img) => {
-    return !img.closest(".pk-lightbox");
+    return !img.closest(".pk-lightbox") && img.dataset.lightbox !== "off";
   });
 
   if (images.length === 0) {
