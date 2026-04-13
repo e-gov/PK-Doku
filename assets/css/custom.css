@@ -1,0 +1,22 @@
+.main-content-wrap {
+  max-width: 76rem !important;
+}
+
+.main-content .table-wrapper {
+  max-width: 100% !important;
+}
+
+.main-content table {
+  width: 100%;
+}
+
+.main-content th,
+.main-content td {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.main-content td code,
+.main-content th code {
+  white-space: normal;
+}
