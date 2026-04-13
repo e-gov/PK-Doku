@@ -8,8 +8,6 @@ permalink: /12-Haldusliidese-REST-API-d/
 
 # Haldusliidese REST API-d
 
-## Eesmärk
-
 Käesolev peatükk kirjeldab partneri haldusliidese REST API-sid, mida kasutatakse mallide, teavituste, saatmisoperatsioonide ja logidega töötamiseks. See vaade on eraldi X-tee kataloogis avaldatud alamsüsteemidest ning seda ei tohi nendega segi ajada.
 
 ## Olulised eeltingimused
@@ -72,4 +70,4 @@ Kui keskkonnas on Swagger UI eraldi avaldatud, on tüüpiline sissepääs `/swag
 
 Keskkonnapõhine host tuleb kinnitada eraldi. Liidestuja vaates on oluline dokumenteerida vähemalt host ja sellele lisanduv rada, näiteks `https://{kokkulepitud-host}/v3/api-docs/notification-management`.
 
-Kui liidestujal on vaja visuaalselt seostada template-, system- ja notification-management teenuseid, on täiendav kõrgtaseme skeem toodud peatükis `Skeemid ja joonised`.
+Kui liidestujal on vaja visuaalselt seostada template-, system- ja notification-management teenuseid, on täiendav kõrgtaseme skeem toodud peatükis [Skeemid ja joonised]({{ '/13-Skeemid-ja-joonised/' | relative_url }}).

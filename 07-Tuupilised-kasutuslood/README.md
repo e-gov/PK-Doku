@@ -7,42 +7,46 @@ permalink: /07-Tuupilised-kasutuslood/
 
 # Tüüpilised kasutuslood
 
-## Eesmärk
-
-Käesolev peatükk kirjeldab tüüpilisi kasutuslugusid, et aidata liidestujal valida õige API rühm ja mõista liidestumise tavapärast kasutusjärjekorda. Täpsed väljad, otspunktid ja tehnilised näited tuleb võtta OpenAPI kirjeldusest.
+Käesolev peatükk kirjeldab tüüpilisi kasutuslugusid, et aidata liidestujal valida õige liidestumise vaade, API rühm ja liidestumise tavapärane kasutusjärjekord. Täpsed väljad, otspunktid ja tehnilised näited tuleb võtta OpenAPI kirjeldusest.
 
 ## Millest alustada
 
 Liidestuja võiks alustada järgmisest järjestusest:
 
-1. määrata, kas kasutatav kanal on REST API või X-tee kaudu vahendatav REST API
-2. valida õige API rühm peatükis `API-d ja OpenAPI kirjeldused`
+1. määrata, kas kasutatav kanal on avalik gateway, X-tee või partneri haldusliidese REST API
+2. valida õige API rühm peatükis [API-d ja OpenAPI kirjeldused]({{ '/06-Teenusliidesed-ja-OpenAPI/' | relative_url }})
 3. kontrollida autentimise, õiguste ja päiste nõudeid
 4. avada vastav OpenAPI kirjeldus või Swagger vaade
 
 ## Kasutuslood
 
-### Teavituse loomine
+### Teavituse loomine partneri haldusliidese kaudu
 
-Kui liidestuja kasutab X-tee või avaliku gateway teavituste voogu, edastatakse uus teavitus alamsüsteemi `notifications` kaudu. Tüüpiline operatsioon on `POST /v1/notifications`.
+Kui liidestuja kasutab partneri haldusliidese REST API-d, on teavituse loomise tüüpiline operatsioon `POST /notification-management/v1/notifications`. Selle päringu puhul antakse kaasa vähemalt `templateId` või `originalTemplateId` ning saatmise sisendandmed.
 
-Kui liidestuja kasutab partneri haldusliidese REST API-d, on tüüpiline operatsioon samuti `POST /v1/notifications`, kuid selle puhul antakse kaasa `templateId` või `originalTemplateId` ning saatmise sisendandmed. Haldusliidese voogu ei tohi segi ajada keskse teenuse eraldi `notifications-from-template` operatsiooniga.
+Seda voogu ei tohi segi ajada `xroad-api` kaudu avaldatud `PUT /v1/notifications` ajakohastamise vooga ega avaliku gateway kasutaja-vaatega.
 
-### Teavituste loetelu küsimine
+### Teavituste loetelu küsimine avaliku gateway kaudu
 
-Liidestuja küsib kasutajale või esindatavale osapoolele seotud teavituste loetelu alamsüsteemi `notifications` kaudu. Tüüpiline operatsioon on `GET /v1/notifications`. Päringu juures tuleb arvestada nõutud identifikaatorite, võimaliku autentimise ja õiguste kontrolliga.
+Kui liidestuja küsib kasutajale või esindatavale osapoolele seotud teavituste loetelu avaliku gateway kaudu, on tüüpiline operatsioon `GET /v1/notification/list`. Päringu juures tuleb arvestada autentimise, õiguste kontrolli ning gateway poolt lisatavate identifikaatoritega nagu `code` ja `inboxId`.
 
-### Teavituse detaili küsimine
+### Teavituse detaili või manuse küsimine
 
-Liidestuja küsib konkreetse teavituse sisu või metaandmeid alamsüsteemi `notifications` kaudu. Tüüpiline operatsioon on `GET /v1/notifications/{id}`. Vajaduse korral tuleb päringule lisada ka isiku- või postkastipõhised tunnused.
+Avaliku gateway kaudu on tüüpilised operatsioonid `GET /v1/notification/{id}`, `GET /v1/notification-central/{id}`, `GET /v1/notification-attachment/{id}` või `GET /v1/notification-attachment-central/{id}`, sõltuvalt sellest, kas küsitakse kohalikku või keskset kirjet.
+
+X-tee või otse teenuse OpenAPI kirjelduses võib detailvaade olla avaldatud ka kujul `GET /v1/notifications/{id}`. Sellisel juhul tuleb lähtuda selle alamsüsteemi või tehnilise vaate OpenAPI kirjeldusest, mille kasutamine on kokku lepitud.
 
 ### Kontaktandmete või eelistuste ajakohastamine
 
-Liidestuja kasutab alamsüsteemi `contacts` siis, kui on vaja hallata teavituste saamisega seotud andmeid. Tüüpilised operatsioonid on `GET /v1/contacts`, `PUT /v1/language-preferences`, `POST /v1/emails`, `PUT /v1/emails` ja `DELETE /v1/emails/{id}`. Kokkulepitud voogudes võivad sinna kuuluda ka mobiilinumbrite, suunamiste, automaatse kustutamise ja personaliseerimisega seotud otspunktid. Selliste toimingute puhul võib rakenduda täiendav õiguste kontroll.
+Liidestuja kasutab `contacts` API-t siis, kui on vaja hallata teavituste saamisega seotud andmeid. Avaliku gateway tüüpilised operatsioonid on `GET /v1/contacts`, `PUT /v1/language-preferences`, `POST /v1/emails`, `PUT /v1/emails` ja `DELETE /v1/emails/{id}`.
+
+Kokkulepitud X-tee voogudes võivad sinna kuuluda ka mobiilinumbrite, suunamiste, automaatse kustutamise ja personaliseerimisega seotud otspunktid. Selliste toimingute puhul võib rakenduda täiendav õiguste kontroll.
 
 ### X-tee kaudu vahendatav ajakohastamine
 
-Valitud toimingute puhul toimub liidestus X-tee vahendusel konkreetse alamsüsteemi kaudu, näiteks `notifications`, `contacts`, `central-template` või mõne `*-notification-management` alamsüsteemi kaudu. Sellisel juhul tuleb avada peatükk `X-tee alamsüsteemid`, valida sobiv alamsüsteem ning kasutada vastavat OpenAPI kirjeldust või Swagger vaadet. Lisaks tuleb arvestada X-tee päiste, osapoolte tuvastamise ja võimalike esindamisega seotud nõuetega.
+Valitud toimingute puhul toimub liidestus `xroad-api` või konkreetse X-tee alamsüsteemi kaudu, näiteks `notifications`, `contacts`, `central-template` või mõne `*-notification-management` alamsüsteemi kaudu. Tüüpiline X-tee gateway kaudu avaldatud teavituse ajakohastamise operatsioon on `PUT /v1/notifications`.
+
+Sellisel juhul tuleb avada peatükk [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}), valida sobiv alamsüsteem ning kasutada vastavat OpenAPI kirjeldust või Swagger vaadet. Lisaks tuleb arvestada X-tee päiste, osapoolte tuvastamise ja võimalike esindamisega seotud nõuetega.
 
 Kui kasutatav alamsüsteem on kujul `*-notification-management`, tähendab see üldjuhul, et tegemist on konkreetse asutuse või partneri teavituste halduse REST API-ga, mis on X-tee kaudu avaldatud. Liidestuja ei peaks sellisel juhul valima suvalist `*-notification-management` kirjet, vaid ainult selle, mis on tema kasutusjuhtumi jaoks eraldi kokku lepitud.
 

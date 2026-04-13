@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Skeemid ja joonised
-nav_order: 15
+nav_order: 95
 permalink: /13-Skeemid-ja-joonised/
 ---
 
@@ -25,13 +25,13 @@ Allolev skeem näitab partneri või kliendi vaadet, kus on koos haldusliidese, p
 
 ## Partneri haldusliidese REST API vaade
 
-Allolev skeem näitab partneri haldusliidese vaadet, kus partneri infosüsteem suhtleb haldusliidese teenustega REST API kaudu ja edastamine keskse lahenduse poole toimub X-tee kaudu.
+Allolev skeem on illustratiivne vaade partneri haldusliidese ümbrusest. Käesoleva dokumentatsiooni järgi liiguvad partneri haldusliidese REST API päringud haldusliidese tehnilise värava `private-api` kaudu otse teenustesse `template-service`, `system-service` ja `notification-management-service`. Skeemil võib olla kujutatud ka seotud keskseid või X-tee komponente, kuid seda ei tohi tõlgendada nii, et haldusliidese iga REST päring liigub X-tee kaudu edasi.
 
 ![Partneri haldusliidese REST API skeem]({{ '/assets/images/haldusliidese-rest-vaade.png' | relative_url }})
 
 ## Teenuste seoste vaade
 
-Allolev skeem aitab siduda omavahel haldusliidese peamised teenused nagu `template-service`, `system-service` ja `notification-management-service` ning näitab, kuidas need seostuvad X-tee kihiga.
+Allolev skeem aitab siduda omavahel haldusliidese peamised teenused nagu `template-service`, `system-service` ja `notification-management-service` ning näitab, et need paiknevad arhitektuuris eraldi kihina X-tee tehnilisest väravast.
 
 ![Teenuste seoste illustratiivne vaade]({{ '/assets/images/teenuste-seoste-vaade.png' | relative_url }})
 

@@ -7,8 +7,6 @@ permalink: /09-Terminite-ja-luhendite-sonastik/
 
 # Terminite ja lühendite sõnastik
 
-## Eesmärk
-
 Käesolev peatükk koondab dokumentatsioonis kasutatavad mõisted ja lühendid. Kui mõistet kasutatakse dokumentatsioonis läbivalt, tuleb selle tähendus esitada siin üheselt.
 
 ## Mõisted ja lühendid

@@ -13,9 +13,9 @@ Postkast 2.0-ga liidestumine toimub kokkulepitud API-de kaudu. Liidestuja peab l
 
 Postkast 2.0 puhul tuleb arvestada vähemalt kolme liidestumise viisiga:
 
-- REST API, mida kasutatakse rakenduse või integreeriva süsteemi vahendusel
-- X-tee kaudu vahendatav REST API, mille puhul rakenduvad täiendavad päiste ja osapoolte tuvastamise nõuded
-- partneri haldusliidese REST API, mille kaudu hallatakse malle, teavitusi, saatmisoperatsioone ja logisid
+- avalik REST API, mida kasutatakse rakenduse või integreeriva süsteemi vahendusel ning mille tehniline värav on `client-public-api`
+- X-tee kaudu vahendatav REST API, mille tehniliseks liideseks on `xroad-api` ja mille puhul rakenduvad täiendavad päiste ja osapoolte tuvastamise nõuded
+- partneri haldusliidese REST API, mille tehniliseks liideseks on `private-api` ning mille kaudu hallatakse malle, teavitusi, saatmisoperatsioone ja logisid
 
 Konkreetne liidestumise viis sõltub kasutusjuhtumist ning eelnevalt kokku lepitud lahendusest.
 

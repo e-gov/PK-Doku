@@ -30,7 +30,7 @@ Näide:
 ## Soovitatav käsitlus
 
 - kontrollida kõigepealt päringu päiseid, identifikaatoreid ja kohustuslikke välju
-- veenduda, et kasutatakse õiget keskkonda ja õiget teenusliidest
+- veenduda, et kasutatakse õiget keskkonda ja õiget teenusliidest, vt [Keskkonnad ja ligipääs]({{ '/03-Keskkonnad-ja-ligipaas/' | relative_url }})
 - vajaduse korral kontrollida õigusi ja esindamisega seotud andmeid
 - tehnilise tõrke korral pöörduda kokkulepitud toe poole koos päringu konteksti kirjeldusega
 

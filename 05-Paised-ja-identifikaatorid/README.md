@@ -19,7 +19,7 @@ Allolevas tabelis on toodud peamised päised, mida tuleb liidestuse kavandamisel
 |---|---|---|---|
 | `X-Road-Client` | X-tee kliendi tunnus | `EE/GOV/70006317/postkast` või keskkonnapõhine arendusväärtus `ee-dev/GOV/70006317/postkast` | Tavaliselt lisatakse gateway või X-tee värava poolt, mitte lõpp-liidestuja poolt |
 | `X-Road-UserId` | X-tee kasutajatunnus | `EE12345678901` | Väärtus ei pruugi alati olla lõppkasutaja isikukood; see võib sõltuda esindamisest |
-| `X-Road-Represented-Party` | Esindatava osapoole tunnus | Kokku lepitud esindatava osapoole identifikaator, näiteks registri- või isikukood | Kasutatakse juhul, kui liidestus toimub esindamise alusel; tavaliselt seatakse X-tee värava kihis |
+| `X-Road-Represented-Party` | Esindatava osapoole tunnus | Kokku lepitud esindatava osapoole identifikaator, näiteks registri- või isikukood | Valikuline päis, mida tuleb kasutada ainult siis, kui konkreetne X-tee voog ja gateway seadistus seda toetavad |
 | `X-User-Access-Type` | Ligipääsu liik | `UNLIMITED` | Lisatakse valitud radadel automaatselt |
 | `X-EXTERNAL-ID` | Välise süsteemi päringu tunnus | Liidestuja määratud kordumatu väärtus, näiteks `550e8400-e29b-41d4-a716-446655440000` | Kasutatakse valitud loomise toimingutes |
 
@@ -28,7 +28,7 @@ Osade päiste puhul peab liidestuja eristama kahte olukorda:
 - päis tuleb liidestuja päringus ise kaasa anda;
 - päis lisatakse gateway või X-tee värava poolt automaatselt.
 
-`X-Road-Client`, `X-Road-Represented-Party` ja `X-User-Access-Type` ei ole üldjuhul päised, mida liidestuja peaks omal käel vabalt moodustama. Nende kasutamine tuleb siduda konkreetse liidestumise viisiga.
+`X-Road-Client` ja `X-User-Access-Type` ei ole üldjuhul päised, mida liidestuja peaks omal käel vabalt moodustama. `X-Road-Represented-Party` tuleb lisada ainult siis, kui see on konkreetse X-tee vooga eraldi kokku lepitud ja toetatud. Nende kasutamine tuleb alati siduda konkreetse liidestumise viisiga.
 
 ## Gateway poolt lisatavad väljad ja päised
 

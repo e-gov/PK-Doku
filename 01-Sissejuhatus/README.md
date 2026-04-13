@@ -7,15 +7,14 @@ permalink: /01-Sissejuhatus/
 
 # Sissejuhatus
 
-## Eesmärk
-
 Käesoleva dokumentatsiooni eesmärk on anda Postkast 2.0-ga liidestuvale asutusele või infosüsteemile ülevaade liidestumiseks vajalikest põhimõtetest, tehnilistest eeldustest ja teenusliideste kasutamise aluspõhimõtetest.
 
 Dokumentatsioon on mõeldud kasutamiseks liidestuse kavandamisel, arendamisel, testimisel ja kasutuselevõtul. Täpsemad päringute ja vastuste kirjeldused on toodud rakendusliidese tehnilistes kirjeldustes.
 
-Dokumentatsioon katab kahte peamist liidestusvaadet:
+Dokumentatsioon katab kolme peamist liidestusvaadet:
 
-- X-tee või avaliku gateway kaudu kasutatavad API-d
+- avaliku gateway kaudu kasutatavad API-d, mille tehniline värav on `client-public-api`
+- X-tee kaudu kasutatavad API-d, mille tehniline värav on `xroad-api`
 - partneri haldusliidese REST API-d, mida kasutatakse mallide, teavituste, saatmisoperatsioonide ja logidega töötamiseks
 
 ## Sihtrühm
@@ -32,6 +31,6 @@ Dokumentatsioon käsitleb väliseid teenusliideseid ning nendega seotud kokkulep
 
 ## Millest alustada
 
-Kui liidestuja kasutab X-tee kaudu avaldatud API-sid, tuleb alustada peatükist `X-tee alamsüsteemid`.
+Kui liidestuja kasutab X-tee kaudu avaldatud API-sid, tuleb alustada peatükist [API-d ja OpenAPI kirjeldused]({{ '/06-Teenusliidesed-ja-OpenAPI/' | relative_url }}) ja sealt edasi peatükist [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}).
 
-Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb alustada peatükist `Haldusliidese REST API-d`.
+Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb alustada peatükist [API-d ja OpenAPI kirjeldused]({{ '/06-Teenusliidesed-ja-OpenAPI/' | relative_url }}) ja sealt edasi peatükist [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}).

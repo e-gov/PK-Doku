@@ -12,7 +12,7 @@ permalink: /06-Teenusliidesed-ja-OpenAPI/
 
 Postkast 2.0 API-de tehniline kirjeldus avaldatakse OpenAPI kirjelduse kujul. OpenAPI kirjeldus on päringute, vastuste, väljade, andmetüüpide ja võimalike vastusekoodide osas esmane lepinguallikas.
 
-Käesolev peatükk ei dubleeri OpenAPI kirjeldusi, vaid koondab liidestuja jaoks peamised API-d ja viited nende tehnilistele kirjeldustele.
+Käesolev peatükk ei dubleeri OpenAPI kirjeldusi, vaid toimib sisulise indeksina: siit saab valida õige liidestumise vaate, API rühma ja OpenAPI kirjelduse.
 
 Käesolevas peatükis tähendab veerg `OpenAPI või Swagger` ühte järgmistest:
 
@@ -20,23 +20,32 @@ Käesolevas peatükis tähendab veerg `OpenAPI või Swagger` ühte järgmistest:
 - viidet peatükile, kus vastav OpenAPI JSON või Swagger vaade on juba koondatud;
 - kokkulepitud keskkonna Swagger vaadet, kui see on liidestujale eraldi avaldatud.
 
-## X-tee ja avaliku gateway peamised API-d
+## Avaliku REST API peamised API-d
 
-Allolevas tabelis ei ole toodud kõik võimalikud otspunktid, vaid peamised API-d või alamsüsteemid, millest liidestuja tavaliselt alustab X-tee või avaliku gateway vaates.
+Allolev tabel koondab peamised API-d, mis on liidestujale kättesaadavad avaliku gateway kaudu. Selle vaate tehniline värav on `client-public-api`. See sobib eeskätt kasutaja- või postkastipõhistele päringutele.
+
+| API või otspunkt | Mille jaoks kasutada | OpenAPI või Swagger |
+|-------------------------------------------------------------------------------------|---|---|
+| `/v1/notification/list`, `/v1/notification/{id}`, `/v1/notification-attachment/{id}` | Teavituste nimekiri, detailvaade ja manuste küsimine avaliku gateway kaudu | `/api/v3/api-docs/notification` |
+| `/v1/contacts`, `/v1/language-preferences`, `/v1/emails`                            | Kontaktandmete, keele-eelistuste ja e-posti aadressidega seotud päringud | `/api/v3/api-docs/contact` |
+| `rights`                                                                            | Õiguste kontrolliga seotud tehniline kirjeldus juhul, kui liidestus eeldab eraldi õiguste teenuse kasutamist | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `rights` |
+
+## X-tee kaudu vahendatav REST API
+
+Kui liidestus toimub X-tee kaudu, tuleb eristada X-tee vaadet avalikust gateway vaatest. X-tee vaate tehniline värav on `xroad-api`. Tehnilised kirjeldused avaldatakse eraldi alamsüsteemide kaupa ning osal voogudel on olemas ka koondatud Swagger vaade.
 
 | API või alamsüsteem | Mille jaoks kasutada | OpenAPI või Swagger |
 |---|---|---|
-| `notifications` | Teavituste loomine, nimekirja küsimine, detaili küsimine, manuste küsimine ja teavituste ajakohastamine | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `notifications` või gateway OpenAPI rada `/api/v3/api-docs/notification` |
-| `contacts` | Kontaktandmete, keele-eelistuste, e-posti aadresside ja telefoninumbritega seotud päringud | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `contacts` või gateway OpenAPI rada `/api/v3/api-docs/contact` |
-| `rights` | Õiguste kontrolliga seotud tehniline kirjeldus juhul, kui liidestus eeldab eraldi õiguste teenuse kasutamist | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `rights` |
-| `central-template` | Mallipõhiste teavituste või mallidega seotud päringud juhul, kui see kasutus on liidestujaga kokku lepitud | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `central-template` |
-| `client-notification-management` või konkreetne `*-notification-management` alamsüsteem | Kliendi või partneri teavituste haldusega seotud päringud | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis vastav `*-notification-management` kirje |
+| `notifications` | X-tee kaudu vahendatud teavituste päringud ja kokkulepitud ajakohastamised | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `notifications` või `xroad-api` koondvaade `/api/v3/api-docs` |
+| `contacts` | Kontaktandmete, keele-eelistuste ja seotud kontaktikanalite päringud | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `contacts` või `xroad-api` koondvaade `/api/v3/api-docs` |
+| `central-template` | Mallipõhiste või keskselt avaldatud teavituste tehniline kirjeldus juhul, kui see voog on liidestujaga kokku lepitud | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `central-template` |
+| `client-notification-management` või konkreetne `*-notification-management` alamsüsteem | X-tee kaudu avaldatud asutuse- või partneripõhised teavituste halduse API-d | [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis vastav `*-notification-management` kirje |
 
 `contacts` alamsüsteem ei piirdu üksnes keele-eelistuste ja e-posti aadressidega. Kokkulepitud voogudes võivad sinna kuuluda ka mobiilinumbrite, lauatelefonide, kinnituskoodide, suunamiste, automaatse kustutamise ja personaliseerimisega seotud otspunktid.
 
 ## Partneri haldusliidese REST API-d
 
-Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb lähtuda eraldi haldusliidese REST API vaatest.
+Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb lähtuda haldusliidese REST API vaatest. Selle vaate tehniline värav on `private-api`. Tegemist on eraldi integratsioonirajaga ning seda ei tohi segi ajada X-tee kaudu avaldatud alamsüsteemide kataloogiga.
 
 | Teenus või rada | Mille jaoks kasutada | OpenAPI või Swagger |
 |---|---|---|
@@ -48,19 +57,19 @@ Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb lähtuda eraldi h
 | `/notification-management/v1/sending-operations` | Saatmisoperatsioonide leidmine ja vajaduse korral uuesti käivitamine | [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/notification-management` |
 | `/notification-management/v1/notification-logs` | Teavituste logide päring | [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/notification-management` |
 
-## Kust leida tehniline kirjeldus
+## Kust alustada
 
-Liidestuja peab lähtuma selle alamsüsteemi või teenusliidese OpenAPI kirjeldusest, mille kasutamine on tema jaoks kokku lepitud.
+Liidestuja peab alustama sellest liidestumise vaatest, mille kasutamine on tema jaoks kokku lepitud:
 
-X-tee kaudu avaldatud teenusliideste tehnilised kirjeldused ja Swagger vaated on koondatud peatükki `X-tee alamsüsteemid`. Kui liidestuja kasutab muud kokkulepitud teenusliidest, tuleb lähtuda vastava keskkonna OpenAPI kirjeldusest või Swagger vaatest.
+- `client-public-api`, kui kasutatakse avaliku gateway kaudu vahendatud kasutaja- või postkastipõhiseid REST API-sid;
+- `xroad-api`, kui kasutatakse X-tee kaudu vahendatud REST API-sid;
+- `private-api`, kui kasutatakse partneri haldusliidese REST API-sid.
 
-Partneri haldusliidese REST API puhul tuleb lähtuda kokkulepitud haldusliidese OpenAPI või Swagger vaatest ning peatükist `Haldusliidese REST API-d`.
+Kui valik on tehtud, tuleb lähtuda vastava komponendi OpenAPI kirjeldusest või Swagger vaatest:
 
-Kui liidestuja kasutab partneri haldusliidese kaudu töötavaid teenuseid, on kõige otsem alguspunkt tavaliselt:
-
-- `/v3/api-docs/template`
-- `/v3/api-docs/notification-management`
-- vajaduse korral hosti juurel asuv `/swagger-ui/index.html`
+- `client-public-api`: näiteks `/api/v3/api-docs/notification` või `/api/v3/api-docs/contact`
+- `xroad-api`: koondvaade `/api/v3/api-docs` või peatükk [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }})
+- `private-api`: `/v3/api-docs/template`, `/v3/api-docs/notification-management`, vajaduse korral `/v3/api-docs/system`
 
 ## OpenAPI kirjelduse kasutamine
 
@@ -73,10 +82,10 @@ OpenAPI kirjeldust tuleb kasutada vähemalt järgmistel eesmärkidel:
 
 Näiteks:
 
-- teavituste päringute puhul tuleb alustada OpenAPI kirjeldusest `notifications`;
-- kontaktandmete päringute puhul tuleb alustada OpenAPI kirjeldusest `contacts`.
-- partneri haldusliidese teadete saatmise puhul tuleb alustada `POST /v1/notifications` kirjeldusega, mitte keskse teenuse `notifications-from-template` vooga.
+- teavituste nimekirja või detailvaate puhul tuleb alustada avaliku gateway `notification` või X-tee `notifications` kirjeldusega, sõltuvalt valitud kanalist;
+- kontaktandmete päringute puhul tuleb alustada `contacts` kirjeldusega;
+- partneri haldusliidese teadete saatmise puhul tuleb alustada teenuse `/notification-management/v1/notifications` kirjeldusega, mitte X-tee `notifications` või keskse teenuse mõne muu vooga.
 
 ## Oluline piirang
 
-OpenAPI kirjeldus ei asenda keskkondade, ligipääsude, õiguste, päiste ega muudatuste halduse dokumenteerimist. Need teemad on kirjeldatud käesoleva dokumentatsiooni teistes peatükkides.
+OpenAPI kirjeldus ei asenda [Keskkonnad ja ligipääs]({{ '/03-Keskkonnad-ja-ligipaas/' | relative_url }}), [Autentimine ja autoriseerimine]({{ '/04-Autentimine-ja-autoriseerimine/' | relative_url }}), [Päised ja identifikaatorid]({{ '/05-Paised-ja-identifikaatorid/' | relative_url }}) ega [Versioonid ja muudatuste haldus]({{ '/10-Versioonid-ja-muudatuste-haldus/' | relative_url }}) peatükkides kirjeldatud kokkuleppeid.
