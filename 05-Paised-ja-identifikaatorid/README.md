@@ -21,6 +21,7 @@ Allolevas tabelis on toodud peamised päised, mida tuleb liidestuse kavandamisel
 | `X-Road-UserId` | X-tee kasutajatunnus | `EE12345678901` | Väärtus ei pruugi alati olla lõppkasutaja isikukood; see võib sõltuda esindamisest |
 | `X-Road-Represented-Party` | Esindatava osapoole tunnus | Kokku lepitud esindatava osapoole identifikaator, näiteks registri- või isikukood | Valikuline päis, mida tuleb kasutada ainult siis, kui konkreetne X-tee voog ja gateway seadistus seda toetavad |
 | `X-User-Access-Type` | Ligipääsu liik | `UNLIMITED` | Lisatakse valitud radadel automaatselt |
+| `X-User-Profiles` | Profiilipõhise ligipääsu tehniline päis | Komaga eraldatud profiiliidentifikaatorite loend | Kasutatakse piiratud ligipääsu juhtudel ja lisatakse üldjuhul haldusliidese tehnilises väravas automaatselt |
 | `X-EXTERNAL-ID` | Välise süsteemi päringu tunnus | Liidestuja määratud kordumatu väärtus, näiteks `550e8400-e29b-41d4-a716-446655440000` | Kasutatakse valitud loomise toimingutes |
 
 Osade päiste puhul peab liidestuja eristama kahte olukorda:
@@ -28,7 +29,7 @@ Osade päiste puhul peab liidestuja eristama kahte olukorda:
 - päis tuleb liidestuja päringus ise kaasa anda;
 - päis lisatakse gateway või X-tee värava poolt automaatselt.
 
-`X-Road-Client` ja `X-User-Access-Type` ei ole üldjuhul päised, mida liidestuja peaks omal käel vabalt moodustama. `X-Road-Represented-Party` tuleb lisada ainult siis, kui see on konkreetse X-tee vooga eraldi kokku lepitud ja toetatud. Nende kasutamine tuleb alati siduda konkreetse liidestumise viisiga.
+`X-Road-Client`, `X-User-Access-Type` ja `X-User-Profiles` ei ole üldjuhul päised, mida liidestuja peaks omal käel vabalt moodustama. `X-Road-Represented-Party` tuleb lisada ainult siis, kui see on konkreetse X-tee vooga eraldi kokku lepitud ja toetatud. Nende kasutamine tuleb alati siduda konkreetse liidestumise viisiga.
 
 ## Gateway poolt lisatavad väljad ja päised
 
@@ -42,6 +43,7 @@ Tüüpilised näited:
 - `X-Road-Client` lisatakse üldjuhul gateway või X-tee kihis
 - `X-Road-UserId` võib sõltuda esindamisest olla kas esindatav osapool või tegelik kasutaja
 - `X-User-Access-Type` lisatakse valitud radadel automaatselt
+- `X-User-Profiles` lisatakse profiilipõhise ligipääsu korral üldjuhul automaatselt
 
 Liidestuja peab iga kasutatava otspunkti puhul lähtuma sellest, kas vastav väli on tema sisendandmete osa või gateway poolt lisatav tehniline väli.
 

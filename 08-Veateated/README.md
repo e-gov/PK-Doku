@@ -25,11 +25,13 @@ Liidestuja peab käsitlema teenusliidese vastuseid nii sisuliste kui ka tehnilis
 
 Näide:
 
+- `400 Bad Request` koos veatähisega `headerParametersMissing` võib tähendada, et puudu on kohustuslik tehniline kasutajakonteksti päis, näiteks `X-User-Access-Type` või piiratud ligipääsu korral `X-User-Profiles`
 - `403 Forbidden` koos veatähisega `ERROR.12` võib tähendada, et kasutajal või esindataval osapoolel puudub nõutud õigus valitud operatsiooni tegemiseks
 
 ## Soovitatav käsitlus
 
 - kontrollida kõigepealt päringu päiseid, identifikaatoreid ja kohustuslikke välju
 - veenduda, et kasutatakse õiget keskkonda ja õiget teenusliidest, vt [Keskkonnad ja ligipääs]({{ '/03-Keskkonnad-ja-ligipaas/' | relative_url }})
+- kui vastuses on `headerParametersMissing`, kontrollida ka tehnilisi kasutajakonteksti päiseid, mida võidakse lisada väravas automaatselt
 - vajaduse korral kontrollida õigusi ja esindamisega seotud andmeid
 - tehnilise tõrke korral eristada, kas tegemist on sisendandmete, õiguste, keskkonna või ajutise töötlemisveaga
