@@ -31,6 +31,6 @@ Dokumentatsioon käsitleb väliseid teenusliideseid ning nendega seotud kokkulep
 
 ## Millest alustada
 
-Kui liidestuja kasutab X-tee kaudu avaldatud API-sid, tuleb alustada peatükist [API-d ja OpenAPI kirjeldused]({{ '/06-Teenusliidesed-ja-OpenAPI/' | relative_url }}) ja sealt edasi peatükist [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}).
+Kui liidestuja kasutab X-tee kaudu avaldatud API-sid, tuleb alustada peatükist [API-d ja OpenAPI kirjeldused]({{ '/06-Teenusliidesed-ja-OpenAPI/' | relative_url }}) ja sealt edasi peatükist [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }}).
 
-Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb alustada peatükist [API-d ja OpenAPI kirjeldused]({{ '/06-Teenusliidesed-ja-OpenAPI/' | relative_url }}) ja sealt edasi peatükist [Haldusliidese REST API-d]({{ '/12-Haldusliidese-REST-API-d/' | relative_url }}).
+Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb alustada peatükist [API-d ja OpenAPI kirjeldused]({{ '/06-Teenusliidesed-ja-OpenAPI/' | relative_url }}) ja sealt edasi peatükist [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}).

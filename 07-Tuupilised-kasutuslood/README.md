@@ -46,7 +46,7 @@ Kokkulepitud X-tee voogudes võivad sinna kuuluda ka mobiilinumbrite, suunamiste
 
 Valitud toimingute puhul toimub liidestus `xroad-api` või konkreetse X-tee alamsüsteemi kaudu, näiteks `notifications`, `contacts`, `central-template` või mõne `*-notification-management` alamsüsteemi kaudu. Tüüpiline X-tee gateway kaudu avaldatud teavituse ajakohastamise operatsioon on `PUT /v1/notifications`.
 
-Sellisel juhul tuleb avada peatükk [X-tee alamsüsteemid]({{ '/11-X-tee-rakendusliideste-vaated/' | relative_url }}), valida sobiv alamsüsteem ning kasutada vastavat OpenAPI kirjeldust või Swagger vaadet. Lisaks tuleb arvestada X-tee päiste, osapoolte tuvastamise ja võimalike esindamisega seotud nõuetega.
+Sellisel juhul tuleb avada peatükk [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }}), valida sobiv alamsüsteem ning kasutada vastavat OpenAPI kirjeldust või Swagger vaadet. Lisaks tuleb arvestada X-tee päiste, osapoolte tuvastamise ja võimalike esindamisega seotud nõuetega.
 
 Kui kasutatav alamsüsteem on kujul `*-notification-management`, tähendab see üldjuhul, et tegemist on konkreetse asutuse või partneri teavituste halduse REST API-ga, mis on X-tee kaudu avaldatud. Liidestuja ei peaks sellisel juhul valima suvalist `*-notification-management` kirjet, vaid ainult selle, mis on tema kasutusjuhtumi jaoks eraldi kokku lepitud.
 
