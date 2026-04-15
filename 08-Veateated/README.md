@@ -31,7 +31,7 @@ Näide:
 ## Soovitatav käsitlus
 
 - kontrollida kõigepealt päringu päiseid, identifikaatoreid ja kohustuslikke välju
-- veenduda, et kasutatakse õiget keskkonda ja õiget teenusliidest, vt [Keskkonnad ja ligipääs]({{ '/03-Keskkonnad-ja-ligipaas/' | relative_url }})
+- veenduda, et kasutatakse õiget keskkonda ja õiget teenusliidest, vt [Keskkonnad ja ligipääs](../03-Keskkonnad-ja-ligipaas/)
 - kui vastuses on `headerParametersMissing`, kontrollida ka tehnilisi kasutajakonteksti päiseid, mida võidakse lisada väravas automaatselt
 - vajaduse korral kontrollida õigusi ja esindamisega seotud andmeid
 - tehnilise tõrke korral eristada, kas tegemist on sisendandmete, õiguste, keskkonna või ajutise töötlemisveaga

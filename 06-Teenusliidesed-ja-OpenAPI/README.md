@@ -28,7 +28,7 @@ Allolev tabel koondab peamised API-d, mis on liidestujale kättesaadavad avaliku
 |-------------------------------------------------------------------------------------|---|---|
 | `/v1/notification/list`, `/v1/notification/{id}`, `/v1/notification-attachment/{id}` | Teavituste nimekiri, detailvaade ja manuste küsimine avaliku gateway kaudu | `/api/v3/api-docs/notification` |
 | `/v1/contacts`, `/v1/language-preferences`, `/v1/emails`                            | Kontaktandmete, keele-eelistuste ja e-posti aadressidega seotud päringud | `/api/v3/api-docs/contact` |
-| `rights`                                                                            | Õiguste kontrolliga seotud tehniline kirjeldus juhul, kui liidestus eeldab eraldi õiguste teenuse kasutamist | [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `rights` |
+| `rights`                                                                            | Õiguste kontrolliga seotud tehniline kirjeldus juhul, kui liidestus eeldab eraldi õiguste teenuse kasutamist | <a href="../10-X-tee-rakendusliideste-vaated/">X-tee alamsüsteemid</a> peatükis kirje `rights` |
 
 ## X-tee kaudu vahendatav REST API
 
@@ -36,10 +36,10 @@ Kui liidestus toimub X-tee kaudu, tuleb eristada X-tee vaadet avalikust gateway 
 
 | API või alamsüsteem | Mille jaoks kasutada | OpenAPI või Swagger |
 |---|---|---|
-| `notifications` | X-tee kaudu vahendatud teavituste päringud ja kokkulepitud ajakohastamised | [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `notifications` või `xroad-api` koondvaade `/api/v3/api-docs` |
-| `contacts` | Kontaktandmete, keele-eelistuste ja seotud kontaktikanalite päringud | [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `contacts` või `xroad-api` koondvaade `/api/v3/api-docs` |
-| `central-template` | Mallipõhiste või keskselt avaldatud teavituste tehniline kirjeldus juhul, kui see voog on liidestujaga kokku lepitud | [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis kirje `central-template` |
-| `client-notification-management` või konkreetne `*-notification-management` alamsüsteem | X-tee kaudu avaldatud asutuse- või partneripõhised teavituste halduse API-d | [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }}) peatükis vastav `*-notification-management` kirje |
+| `notifications` | X-tee kaudu vahendatud teavituste päringud ja kokkulepitud ajakohastamised | <a href="../10-X-tee-rakendusliideste-vaated/">X-tee alamsüsteemid</a> peatükis kirje `notifications` või `xroad-api` koondvaade `/api/v3/api-docs` |
+| `contacts` | Kontaktandmete, keele-eelistuste ja seotud kontaktikanalite päringud | <a href="../10-X-tee-rakendusliideste-vaated/">X-tee alamsüsteemid</a> peatükis kirje `contacts` või `xroad-api` koondvaade `/api/v3/api-docs` |
+| `central-template` | Mallipõhiste või keskselt avaldatud teavituste tehniline kirjeldus juhul, kui see voog on liidestujaga kokku lepitud | <a href="../10-X-tee-rakendusliideste-vaated/">X-tee alamsüsteemid</a> peatükis kirje `central-template` |
+| `client-notification-management` või konkreetne `*-notification-management` alamsüsteem | X-tee kaudu avaldatud asutuse- või partneripõhised teavituste halduse API-d | <a href="../10-X-tee-rakendusliideste-vaated/">X-tee alamsüsteemid</a> peatükis vastav `*-notification-management` kirje |
 
 `contacts` alamsüsteem ei piirdu üksnes keele-eelistuste ja e-posti aadressidega. Kokkulepitud voogudes võivad sinna kuuluda ka mobiilinumbrite, lauatelefonide, kinnituskoodide, suunamiste, automaatse kustutamise ja personaliseerimisega seotud otspunktid.
 
@@ -49,13 +49,13 @@ Kui liidestuja kasutab partneri haldusliidese teenuseid, tuleb lähtuda haldusli
 
 | Teenus või rada | Mille jaoks kasutada | OpenAPI või Swagger |
 |---|---|---|
-| `/system/v1/owners/default` | Asutuse põhiandmete küsimine ja uuendamine | [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/system` |
-| `/system/v1/profiles` | Profiilide loomine, küsimine ja haldamine | [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/system` |
-| `/template/v1/templates` | Mallide loomine, küsimine, uuendamine ja kustutamine | [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/template` |
-| `/template/v1/template-messages` | Malli tekstide loomine ja haldamine | [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/template` |
-| `/notification-management/v1/notifications` | Teavituste loomine ja valitud juhtudel detailvaade | [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/notification-management` |
-| `/notification-management/v1/sending-operations` | Saatmisoperatsioonide leidmine ja vajaduse korral uuesti käivitamine | [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/notification-management` |
-| `/notification-management/v1/notification-logs` | Teavituste logide päring | [Haldusliidese REST API-d]({{ '/11-Haldusliidese-REST-API-d/' | relative_url }}) või OpenAPI rada `/v3/api-docs/notification-management` |
+| `/system/v1/owners/default` | Asutuse põhiandmete küsimine ja uuendamine | <a href="../11-Haldusliidese-REST-API-d/">Haldusliidese REST API-d</a> või OpenAPI rada `/v3/api-docs/system` |
+| `/system/v1/profiles` | Profiilide loomine, küsimine ja haldamine | <a href="../11-Haldusliidese-REST-API-d/">Haldusliidese REST API-d</a> või OpenAPI rada `/v3/api-docs/system` |
+| `/template/v1/templates` | Mallide loomine, küsimine, uuendamine ja kustutamine | <a href="../11-Haldusliidese-REST-API-d/">Haldusliidese REST API-d</a> või OpenAPI rada `/v3/api-docs/template` |
+| `/template/v1/template-messages` | Malli tekstide loomine ja haldamine | <a href="../11-Haldusliidese-REST-API-d/">Haldusliidese REST API-d</a> või OpenAPI rada `/v3/api-docs/template` |
+| `/notification-management/v1/notifications` | Teavituste loomine ja valitud juhtudel detailvaade | <a href="../11-Haldusliidese-REST-API-d/">Haldusliidese REST API-d</a> või OpenAPI rada `/v3/api-docs/notification-management` |
+| `/notification-management/v1/sending-operations` | Saatmisoperatsioonide leidmine ja vajaduse korral uuesti käivitamine | <a href="../11-Haldusliidese-REST-API-d/">Haldusliidese REST API-d</a> või OpenAPI rada `/v3/api-docs/notification-management` |
+| `/notification-management/v1/notification-logs` | Teavituste logide päring | <a href="../11-Haldusliidese-REST-API-d/">Haldusliidese REST API-d</a> või OpenAPI rada `/v3/api-docs/notification-management` |
 
 ## Kust alustada
 
@@ -68,7 +68,7 @@ Liidestuja peab alustama sellest liidestumise vaatest, mille kasutamine on tema 
 Kui valik on tehtud, tuleb lähtuda vastava komponendi OpenAPI kirjeldusest või Swagger vaatest:
 
 - `client-public-api`: näiteks `/api/v3/api-docs/notification` või `/api/v3/api-docs/contact`
-- `xroad-api`: koondvaade `/api/v3/api-docs` või peatükk [X-tee alamsüsteemid]({{ '/10-X-tee-rakendusliideste-vaated/' | relative_url }})
+- `xroad-api`: koondvaade `/api/v3/api-docs` või peatükk [X-tee alamsüsteemid](../10-X-tee-rakendusliideste-vaated/)
 - `private-api`: `/v3/api-docs/template`, `/v3/api-docs/notification-management`, vajaduse korral `/v3/api-docs/system`
 
 ## OpenAPI kirjelduse kasutamine
@@ -88,4 +88,4 @@ Näiteks:
 
 ## Oluline piirang
 
-OpenAPI kirjeldus ei asenda [Keskkonnad ja ligipääs]({{ '/03-Keskkonnad-ja-ligipaas/' | relative_url }}), [Autentimine ja autoriseerimine]({{ '/04-Autentimine-ja-autoriseerimine/' | relative_url }}) ega [Päised ja identifikaatorid]({{ '/05-Paised-ja-identifikaatorid/' | relative_url }}) peatükkides kirjeldatud kokkuleppeid.
+OpenAPI kirjeldus ei asenda [Keskkonnad ja ligipääs](../03-Keskkonnad-ja-ligipaas/), [Autentimine ja autoriseerimine](../04-Autentimine-ja-autoriseerimine/) ega [Päised ja identifikaatorid](../05-Paised-ja-identifikaatorid/) peatükkides kirjeldatud kokkuleppeid.
