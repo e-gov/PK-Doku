@@ -8,18 +8,19 @@ Dokumentatsioon on koostatud liidestuja vaatest. Siin ei kirjeldata süsteemi si
 
 Soovitatav on tutvuda dokumentatsiooniga järgmises järjekorras:
 
-1. [Sissejuhatus](./01-Sissejuhatus/)
-2. [Liidestumise üldpõhimõtted](./02-Liidestumise-uldpohimotted/)
-3. [Keskkonnad ja ligipääs](./03-Keskkonnad-ja-ligipaas/)
-4. [Autentimine ja autoriseerimine](./04-Autentimine-ja-autoriseerimine/)
-5. [Päised ja identifikaatorid](./05-Paised-ja-identifikaatorid/)
-6. [Teenusliidesed ja rakendusliidese kirjeldus](./06-Teenusliidesed-ja-OpenAPI/)
-7. [X-tee alamsüsteemid](./10-X-tee-rakendusliideste-vaated/)
-8. [Haldusliidese REST API-d](./11-Haldusliidese-REST-API-d/)
-9. [Tüüpilised kasutuslood](./07-Tuupilised-kasutuslood/)
-10. [Veateated](./08-Veateated/)
-11. [Terminite ja lühendite sõnastik](./09-Terminite-ja-luhendite-sonastik/)
-12. [Skeemid ja joonised](./12-Skeemid-ja-joonised/)
+1. [Uudised ja muudatused](./13-Uudised-ja-muudatused/)
+2. [Sissejuhatus](./01-Sissejuhatus/)
+3. [Liidestumise üldpõhimõtted](./02-Liidestumise-uldpohimotted/)
+4. [Keskkonnad ja ligipääs](./03-Keskkonnad-ja-ligipaas/)
+5. [Autentimine ja autoriseerimine](./04-Autentimine-ja-autoriseerimine/)
+6. [Päised ja identifikaatorid](./05-Paised-ja-identifikaatorid/)
+7. [Teenusliidesed ja rakendusliidese kirjeldus](./06-Teenusliidesed-ja-OpenAPI/)
+8. [X-tee alamsüsteemid](./10-X-tee-rakendusliideste-vaated/)
+9. [Haldusliidese REST API-d](./11-Haldusliidese-REST-API-d/)
+10. [Tüüpilised kasutuslood](./07-Tuupilised-kasutuslood/)
+11. [Veateated](./08-Veateated/)
+12. [Terminite ja lühendite sõnastik](./09-Terminite-ja-luhendite-sonastik/)
+13. [Skeemid ja joonised](./12-Skeemid-ja-joonised/)
 
 ## Oluline märkus
 
